@@ -1,0 +1,24 @@
+# Generic
+.DS_Store
+._*
+__*
+*.gz
+*.tar
+*.tgz
+tmp*
+tmp/*
+tmp/**/*
+
+# XCode
+build/*
+*.pbxuser
+*.mode?v3
+*.perspectivev3
+xcuserdata
+*.moved-aside
+*.xccheckout
+
+# Temp nibs and swap files
+*~.nib
+*.swp
+*~
