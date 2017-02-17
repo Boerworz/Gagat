@@ -12,10 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	var transitionHandler: Gagat.TransitionHandler?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		
+		let configuration = Gagat.Configuration(jellyFactor: 1.5, supportedDirections: [.up, .down])
+		transitionHandler = Gagat.configure(for: window!, using: configuration, with: window!.rootViewController! as! GagatStyleable)
+		
 		return true
 	}
 
