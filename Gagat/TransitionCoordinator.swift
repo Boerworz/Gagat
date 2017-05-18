@@ -18,14 +18,30 @@ class TransitionCoordinator: NSObject {
 	
 	fileprivate let configuration: Gagat.Configuration
 	private let styleableObject: GagatStyleable
+
+	private(set) var panGestureRecognizer: UIPanGestureRecognizer!
 	
 	init(targetView: UIView, configuration: Gagat.Configuration, styleableObject: GagatStyleable) {
 		self.targetView = targetView
 		self.configuration = configuration
 		self.styleableObject = styleableObject
+
+		super.init()
+
+		setupPanGestureRecognizer(in: targetView)
 	}
 	
-	// MARK: - Pan gesture recognizer action
+	// MARK: - Pan gesture recognizer
+
+	private func setupPanGestureRecognizer(in targetView: UIView) {
+		let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panRecognizerDidChange(_:)))
+		panGestureRecognizer.maximumNumberOfTouches = 2
+		panGestureRecognizer.minimumNumberOfTouches = 2
+		panGestureRecognizer.delegate = self
+		targetView.addGestureRecognizer(panGestureRecognizer)
+
+		self.panGestureRecognizer = panGestureRecognizer
+	}
 	
 	func panRecognizerDidChange(_ panRecognizer: UIPanGestureRecognizer) {
 		switch panRecognizer.state {

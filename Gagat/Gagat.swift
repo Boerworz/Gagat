@@ -29,6 +29,10 @@ struct Gagat {
 		fileprivate init(coordinator: TransitionCoordinator) {
 			self.coordinator = coordinator
 		}
+
+		var panGestureRecognizer: UIPanGestureRecognizer {
+			return coordinator.panGestureRecognizer
+		}
 	}
 	
 	static func configure(for window: UIWindow, using configuration: Configuration = .defaults) -> TransitionHandle? {
@@ -42,19 +46,7 @@ struct Gagat {
 			return nil
 		}
 
-		let coordinator = setupTransitionCoordinator(for: window, with: styleableObject, using: configuration)
+		let coordinator = TransitionCoordinator(targetView: window, configuration: configuration, styleableObject: styleableObject)
 		return TransitionHandle(coordinator: coordinator)
-	}
-	
-	private static func setupTransitionCoordinator(for view: UIView, with styleableObject: GagatStyleable, using configuration: Configuration) -> TransitionCoordinator {
-		let coordinator = TransitionCoordinator(targetView: view, configuration: configuration, styleableObject: styleableObject)
-		
-		let panRecognizer = UIPanGestureRecognizer(target: coordinator, action: #selector(TransitionCoordinator.panRecognizerDidChange(_:)))
-		panRecognizer.maximumNumberOfTouches = 2
-		panRecognizer.minimumNumberOfTouches = 2
-		panRecognizer.delegate = coordinator
-		view.addGestureRecognizer(panRecognizer)
-		
-		return coordinator
 	}
 }
