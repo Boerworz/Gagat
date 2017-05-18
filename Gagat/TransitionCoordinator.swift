@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 class TransitionCoordinator: NSObject {
+
+	private enum State {
+		case idle
+		case tracking
+		case transitioning
+	}
+
 	/// This represents the view (or window) that the transition should
     /// occur in.
 	/// Note: This is not necessarily the same view that the gesture
@@ -20,6 +27,8 @@ class TransitionCoordinator: NSObject {
 	private let styleableObject: GagatStyleable
 
 	private(set) var panGestureRecognizer: UIPanGestureRecognizer!
+
+	fileprivate var state = State.idle
 	
 	init(targetView: UIView, configuration: Gagat.Configuration, styleableObject: GagatStyleable) {
 		self.targetView = targetView
@@ -94,6 +103,8 @@ class TransitionCoordinator: NSObject {
 		// Finally we make our first adjustment to the mask layer based on the
 		// values of the pan recognizer.
 		adjustMaskLayer(basedOn: panRecognizer)
+
+		state = .tracking
 	}
 	
 	fileprivate func adjustMaskLayer(basedOn panRecognizer: UIPanGestureRecognizer) {
@@ -187,6 +198,8 @@ class TransitionCoordinator: NSObject {
 		guard let snapshotMaskLayer = snapshotMaskLayer else {
 			return
 		}
+
+		state = .transitioning
 		
 		// When cancelling the transition we simply move the mask layer to it's original
 		// location (which means that the entire previous style snapshot is shown), then
@@ -194,6 +207,7 @@ class TransitionCoordinator: NSObject {
 		animate(snapshotMaskLayer, to: .zero, withVelocity: velocity) {
 			self.styleableObject.applyNextStyle()
 			self.cleanupAfterInteractiveStyleTransition()
+			self.state = .idle
 		}
 	}
 	
@@ -201,6 +215,8 @@ class TransitionCoordinator: NSObject {
 		guard let snapshotMaskLayer = snapshotMaskLayer else {
 			return
 		}
+
+		state = .transitioning
 		
 		// When completing the transition we slide the mask layer down to the bottom of
 		// the targetView and then remove the snapshot. The further down the mask layer is,
@@ -210,6 +226,7 @@ class TransitionCoordinator: NSObject {
 		let targetLocation = CGPoint(x: 0.0, y: targetView.bounds.maxY)
 		animate(snapshotMaskLayer, to: targetLocation, withVelocity: velocity) {
 			self.cleanupAfterInteractiveStyleTransition()
+			self.state = .idle
 		}
 	}
 	
@@ -230,6 +247,10 @@ extension TransitionCoordinator: UIGestureRecognizerDelegate {
 	func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
 		guard let panRecognizer = gestureRecognizer as? UIPanGestureRecognizer else {
 			return true
+		}
+
+		guard state == .idle else {
+			return false
 		}
 		
 		let translation = panRecognizer.translation(in: targetView)
