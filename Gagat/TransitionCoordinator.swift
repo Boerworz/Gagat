@@ -206,6 +206,10 @@ class TransitionCoordinator: NSObject {
 
 extension TransitionCoordinator: UIGestureRecognizerDelegate {
 	private typealias Degrees = Double
+
+	private enum Direction {
+		case up, down, left, right
+	}
 	
 	func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
 		guard let panRecognizer = gestureRecognizer as? UIPanGestureRecognizer else {
@@ -214,11 +218,16 @@ extension TransitionCoordinator: UIGestureRecognizerDelegate {
 		
 		let translation = panRecognizer.translation(in: targetView)
 		let panningAngle: Degrees = atan2(Double(translation.y), Double(translation.x)) * 360 / (M_PI * 2)
-		switch panningAngle {
-		case 45.0...135.0: return configuration.supportedDirections.contains(.down)
-		case 135.0...225.0: return configuration.supportedDirections.contains(.left)
-		case 225.0...315.0: return configuration.supportedDirections.contains(.up)
-		default: return configuration.supportedDirections.contains(.right)
+		let panningDirection = direction(for: panningAngle)
+		return panningDirection == .down
+	}
+	
+	private func direction(for angle: Degrees) -> Direction {
+		switch angle {
+		case 45.0...135.0: return .down
+		case 135.0...225.0: return .left
+		case 225.0...315.0: return .up
+		default: return .right
 		}
 	}
 }

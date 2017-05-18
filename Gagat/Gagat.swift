@@ -16,38 +16,39 @@ protocol GagatStyleable {
 struct Gagat {
 	
 	struct Configuration {
-		
-		enum Direction {
-			case up, down, left, right
-			
-			static let horizontal: [Direction] = [.left, .right]
-			static let vertical: [Direction] = [.up, .down]
-		}
-		
-		let supportedDirections: [Direction]
 		let jellyFactor: Double
-		
-		init(jellyFactor: Double = 1.0, supportedDirections: [Direction] = [.down]) {
-			self.jellyFactor = jellyFactor
-			self.supportedDirections = supportedDirections
+
+		static var defaults: Configuration {
+			return Configuration(jellyFactor: 1.0)
 		}
 	}
 	
-	struct TransitionHandler {
+	struct TransitionHandle {
 		var enabled: Bool = true
-		let coordinator: TransitionCoordinator
+
+		fileprivate let coordinator: TransitionCoordinator
 		
-		init(coordinator: TransitionCoordinator) {
+		fileprivate init(coordinator: TransitionCoordinator) {
 			self.coordinator = coordinator
 		}
 	}
 	
-	static func configure(for window: UIWindow, using configuration: Configuration = Configuration(), with styleableObject: GagatStyleable) -> TransitionHandler {
-		let coordinator = setupTransitionCoordinator(in: window, using: configuration, with: styleableObject)
-		return TransitionHandler(coordinator: coordinator)
+	static func configure(for window: UIWindow, using configuration: Configuration = .defaults) -> TransitionHandle? {
+		guard let rootViewController = window.rootViewController else {
+			assert(false, "Gagat Error: \(window) does not have a root view controller.")
+			return nil
+		}
+
+		guard let styleableObject = rootViewController as? GagatStyleable else {
+			assert(false, "Gagat Error: \(rootViewController) does not conform to `GagatStyleable`.")
+			return nil
+		}
+
+		let coordinator = setupTransitionCoordinator(for: window, with: styleableObject, using: configuration)
+		return TransitionHandle(coordinator: coordinator)
 	}
 	
-	private static func setupTransitionCoordinator(in view: UIView, using configuration: Configuration, with styleableObject: GagatStyleable) -> TransitionCoordinator {
+	private static func setupTransitionCoordinator(for view: UIView, with styleableObject: GagatStyleable, using configuration: Configuration) -> TransitionCoordinator {
 		let coordinator = TransitionCoordinator(targetView: view, configuration: configuration, styleableObject: styleableObject)
 		
 		let panRecognizer = UIPanGestureRecognizer(target: coordinator, action: #selector(TransitionCoordinator.panRecognizerDidChange(_:)))
