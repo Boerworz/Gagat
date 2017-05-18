@@ -9,8 +9,6 @@
 import Foundation
 import QuartzCore
 
-// MARK: - Animation utilities
-
 private func distance(from source: CGPoint, to destination: CGPoint) -> CGFloat {
 	return sqrt(pow(destination.x - source.x, 2) + pow(destination.y - source.y, 2))
 }
