@@ -11,7 +11,7 @@ import UIKit
 
 class TransitionCoordinator: NSObject {
 
-	private enum State {
+	fileprivate enum State {
 		case idle
 		case tracking
 		case transitioning
