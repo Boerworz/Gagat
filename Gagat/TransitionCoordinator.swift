@@ -160,7 +160,8 @@ class TransitionCoordinator: NSObject {
 		// Note: To increase the bouncy effect, decrease the `damping` value.
 		let damping = CGFloat(45.0 / configuration.jellyFactor)
 		let verticalOffset = panRecognizer.velocity(in: targetView).y / damping
-		maskingPath.addQuadCurve(to: CGPoint(x: targetView.bounds.maxX, y: 0.0), controlPoint: CGPoint(x: targetView.bounds.midX, y: verticalOffset))
+		let horizontalTouchLocation = panRecognizer.location(in: targetView).x
+		maskingPath.addQuadCurve(to: CGPoint(x: targetView.bounds.maxX, y: 0.0), controlPoint: CGPoint(x: horizontalTouchLocation, y: verticalOffset))
 		
 		// ...to bottom-right corner...
 		maskingPath.addLine(to: CGPoint(x: targetView.bounds.maxX, y: targetView.bounds.maxY))
