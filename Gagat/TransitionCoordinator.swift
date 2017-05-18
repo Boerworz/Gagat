@@ -233,7 +233,7 @@ extension TransitionCoordinator: UIGestureRecognizerDelegate {
 		}
 		
 		let translation = panRecognizer.translation(in: targetView)
-		let panningAngle: Degrees = atan2(Double(translation.y), Double(translation.x)) * 360 / (M_PI * 2)
+		let panningAngle: Degrees = atan2(Double(translation.y), Double(translation.x)) * 360 / (Double.pi * 2)
 		let panningDirection = direction(for: panningAngle)
 		return panningDirection == .down
 	}
