@@ -24,8 +24,6 @@ struct Gagat {
 	}
 	
 	struct TransitionHandle {
-		var enabled: Bool = true
-
 		fileprivate let coordinator: TransitionCoordinator
 		
 		fileprivate init(coordinator: TransitionCoordinator) {
