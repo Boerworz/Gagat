@@ -158,8 +158,8 @@ class TransitionCoordinator: NSObject {
 		// even when the user stops moving their finger (until the velocity
 		// reaches 0).
 		// Note: To increase the bouncy effect, decrease the `damping` value.
-		let damping = CGFloat(45.0 / configuration.jellyFactor)
-		let verticalOffset = panRecognizer.velocity(in: targetView).y / damping
+		let damping = configuration.jellyFactor > 0.0 ? CGFloat(45.0 / configuration.jellyFactor) : 0.0
+		let verticalOffset = damping > 0.0 ? panRecognizer.velocity(in: targetView).y / damping : 0.0
 		let horizontalTouchLocation = panRecognizer.location(in: targetView).x
 		maskingPath.addQuadCurve(to: CGPoint(x: targetView.bounds.maxX, y: 0.0), controlPoint: CGPoint(x: horizontalTouchLocation, y: verticalOffset))
 		
