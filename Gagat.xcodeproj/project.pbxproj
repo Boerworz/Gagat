@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		933467791ED75FD00073514D /* PessimisticPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933467781ED75FD00073514D /* PessimisticPanGestureRecognizer.swift */; };
 		9386EDDE1E577236009079B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386EDDD1E577236009079B6 /* AppDelegate.swift */; };
 		9386EDE01E577236009079B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9386EDDF1E577236009079B6 /* ViewController.swift */; };
 		9386EDE31E577236009079B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9386EDE11E577236009079B6 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		933467781ED75FD00073514D /* PessimisticPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessimisticPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		9386EDDA1E577236009079B6 /* Gagat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gagat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9386EDDD1E577236009079B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9386EDDF1E577236009079B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				9386EDEF1E577392009079B6 /* Gagat.swift */,
 				9386EDF21E577981009079B6 /* TransitionCoordinator.swift */,
 				9386EDF41E578063009079B6 /* AnimationUtilities.swift */,
+				933467781ED75FD00073514D /* PessimisticPanGestureRecognizer.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				9386EDF51E578063009079B6 /* AnimationUtilities.swift in Sources */,
 				9386EDE01E577236009079B6 /* ViewController.swift in Sources */,
+				933467791ED75FD00073514D /* PessimisticPanGestureRecognizer.swift in Sources */,
 				9386EDF31E577981009079B6 /* TransitionCoordinator.swift in Sources */,
 				9386EDDE1E577236009079B6 /* AppDelegate.swift in Sources */,
 				9386EDF01E577392009079B6 /* Gagat.swift in Sources */,

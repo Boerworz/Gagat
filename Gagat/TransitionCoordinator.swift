@@ -26,7 +26,7 @@ class TransitionCoordinator: NSObject {
 	fileprivate let configuration: Gagat.Configuration
 	private let styleableObject: GagatStyleable
 
-	private(set) var panGestureRecognizer: UIPanGestureRecognizer!
+	private(set) var panGestureRecognizer: PessimisticPanGestureRecognizer!
 
 	fileprivate var state = State.idle
 	
@@ -43,7 +43,7 @@ class TransitionCoordinator: NSObject {
 	// MARK: - Pan gesture recognizer
 
 	private func setupPanGestureRecognizer(in targetView: UIView) {
-		let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panRecognizerDidChange(_:)))
+		let panGestureRecognizer = PessimisticPanGestureRecognizer(target: self, action: #selector(panRecognizerDidChange(_:)))
 		panGestureRecognizer.maximumNumberOfTouches = 2
 		panGestureRecognizer.minimumNumberOfTouches = 2
 		panGestureRecognizer.delegate = self
@@ -52,7 +52,7 @@ class TransitionCoordinator: NSObject {
 		self.panGestureRecognizer = panGestureRecognizer
 	}
 	
-	func panRecognizerDidChange(_ panRecognizer: UIPanGestureRecognizer) {
+	func panRecognizerDidChange(_ panRecognizer: PessimisticPanGestureRecognizer) {
 		switch panRecognizer.state {
 		case .began:
 			beginInteractiveStyleTransition(withPanRecognizer: panRecognizer)
@@ -80,7 +80,7 @@ class TransitionCoordinator: NSObject {
 	/// adjusted to reflect the current translation of the pan recognizer.
 	fileprivate var snapshotMaskLayer: CAShapeLayer?
 	
-	fileprivate func beginInteractiveStyleTransition(withPanRecognizer panRecognizer: UIPanGestureRecognizer) {
+	fileprivate func beginInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
 		// We snapshot the targetView before applying the new style, and make sure
 		// it's positioned on top of all the other content.
 		previousStyleViewSnapshot = targetView.snapshotView(afterScreenUpdates: false)
@@ -107,12 +107,12 @@ class TransitionCoordinator: NSObject {
 		state = .tracking
 	}
 	
-	fileprivate func adjustMaskLayer(basedOn panRecognizer: UIPanGestureRecognizer) {
+	fileprivate func adjustMaskLayer(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
 		adjustMaskLayerPosition(basedOn: panRecognizer)
 		adjustMaskLayerPath(basedOn: panRecognizer)
 	}
 	
-	fileprivate func adjustMaskLayerPosition(basedOn panRecognizer: UIPanGestureRecognizer) {
+	fileprivate func adjustMaskLayerPosition(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
 		// We need to disable implicit animations since we don't want to
 		// animate the position change of the mask layer.
 		CATransaction.begin()
@@ -141,7 +141,7 @@ class TransitionCoordinator: NSObject {
 		CATransaction.commit()
 	}
 	
-	fileprivate func adjustMaskLayerPath(basedOn panRecognizer: UIPanGestureRecognizer) {
+	fileprivate func adjustMaskLayerPath(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
 		let maskingPath = UIBezierPath()
 		
 		// Top-left corner...
@@ -175,7 +175,7 @@ class TransitionCoordinator: NSObject {
 		snapshotMaskLayer?.path = maskingPath.cgPath
 	}
 	
-	fileprivate func endInteractiveStyleTransition(withPanRecognizer panRecognizer: UIPanGestureRecognizer) {
+	fileprivate func endInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
 		let velocity = panRecognizer.velocity(in: targetView)
 		let translation = panRecognizer.translation(in: targetView)
 		
@@ -246,7 +246,7 @@ extension TransitionCoordinator: UIGestureRecognizerDelegate {
 	}
 	
 	func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-		guard let panRecognizer = gestureRecognizer as? UIPanGestureRecognizer else {
+		guard let panRecognizer = gestureRecognizer as? PessimisticPanGestureRecognizer else {
 			return true
 		}
 
