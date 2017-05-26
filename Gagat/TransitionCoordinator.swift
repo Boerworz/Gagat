@@ -100,7 +100,7 @@ class TransitionCoordinator: NSObject {
 		// Now we're free to apply the new style. This won't be visible until
 		// the user pans more since the snapshot is displayed on top of the
 		// actual content.
-		styleableObject.applyNextStyle()
+		styleableObject.toggleActiveStyle()
 		
 		// Finally we make our first adjustment to the mask layer based on the
 		// values of the pan recognizer.
@@ -198,7 +198,7 @@ class TransitionCoordinator: NSObject {
 	}
 
 	private func cancelInteractiveStyleTransitionWithoutAnimation() {
-		styleableObject.applyNextStyle()
+		styleableObject.toggleActiveStyle()
 		cleanupAfterInteractiveStyleTransition()
 		state = .idle
 	}
@@ -214,7 +214,7 @@ class TransitionCoordinator: NSObject {
 		// location (which means that the entire previous style snapshot is shown), then
 		// reset the style to the previous style and remove the snapshot.
 		animate(snapshotMaskLayer, to: .zero, withVelocity: velocity) {
-			self.styleableObject.applyNextStyle()
+			self.styleableObject.toggleActiveStyle()
 			self.cleanupAfterInteractiveStyleTransition()
 			self.state = .idle
 		}

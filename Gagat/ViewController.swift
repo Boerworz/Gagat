@@ -20,7 +20,7 @@ class ViewController: UIViewController, GagatStyleable {
 		return useDarkMode ? .lightContent : .default
 	}
 	
-	func applyNextStyle() {
+	func toggleActiveStyle() {
 		useDarkMode = !useDarkMode
 	}
 }

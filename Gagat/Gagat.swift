@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol GagatStyleable {
-	func applyNextStyle()
+	func toggleActiveStyle()
 }
 
 struct Gagat {
