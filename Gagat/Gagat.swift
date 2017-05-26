@@ -24,7 +24,7 @@ struct Gagat {
 	}
 	
 	struct TransitionHandle {
-		fileprivate let coordinator: TransitionCoordinator
+		private let coordinator: TransitionCoordinator
 		
 		fileprivate init(coordinator: TransitionCoordinator) {
 			self.coordinator = coordinator
