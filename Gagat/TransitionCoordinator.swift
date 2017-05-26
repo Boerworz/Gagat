@@ -74,15 +74,15 @@ class TransitionCoordinator: NSObject {
 	/// As the transition progresses, less and less of the snapshot view
 	/// will be visible, revealing more of the real view which is styled
 	/// with the new style.
-	fileprivate var previousStyleViewSnapshot: UIView?
+	private var previousStyleViewSnapshot: UIView?
 	
 	/// During the interactive transition, this property contains the layer
 	/// used to mask the contents of `previousStyleViewSnapshot`.
 	/// When the user pans, the position and path of `snapshotMaskLayer` is
 	/// adjusted to reflect the current translation of the pan recognizer.
-	fileprivate var snapshotMaskLayer: CAShapeLayer?
+	private var snapshotMaskLayer: CAShapeLayer?
 	
-	fileprivate func beginInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
+	private func beginInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
 		// We snapshot the targetView before applying the new style, and make sure
 		// it's positioned on top of all the other content.
 		previousStyleViewSnapshot = targetView.snapshotView(afterScreenUpdates: false)
@@ -109,12 +109,12 @@ class TransitionCoordinator: NSObject {
 		state = .tracking
 	}
 	
-	fileprivate func adjustMaskLayer(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
+	private func adjustMaskLayer(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
 		adjustMaskLayerPosition(basedOn: panRecognizer)
 		adjustMaskLayerPath(basedOn: panRecognizer)
 	}
 	
-	fileprivate func adjustMaskLayerPosition(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
+	private func adjustMaskLayerPosition(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
 		// We need to disable implicit animations since we don't want to
 		// animate the position change of the mask layer.
 		CATransaction.begin()
@@ -143,7 +143,7 @@ class TransitionCoordinator: NSObject {
 		CATransaction.commit()
 	}
 	
-	fileprivate func adjustMaskLayerPath(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
+	private func adjustMaskLayerPath(basedOn panRecognizer: PessimisticPanGestureRecognizer) {
 		let maskingPath = UIBezierPath()
 		
 		// Top-left corner...
@@ -177,7 +177,7 @@ class TransitionCoordinator: NSObject {
 		snapshotMaskLayer?.path = maskingPath.cgPath
 	}
 	
-	fileprivate func endInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
+	private func endInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
 		let velocity = panRecognizer.velocity(in: targetView)
 		let translation = panRecognizer.translation(in: targetView)
 		
@@ -203,7 +203,7 @@ class TransitionCoordinator: NSObject {
 		state = .idle
 	}
 	
-	fileprivate func cancelInteractiveStyleTransition(withVelocity velocity: CGPoint) {
+	private func cancelInteractiveStyleTransition(withVelocity velocity: CGPoint) {
 		guard let snapshotMaskLayer = snapshotMaskLayer else {
 			return
 		}
@@ -220,7 +220,7 @@ class TransitionCoordinator: NSObject {
 		}
 	}
 	
-	fileprivate func completeInteractiveStyleTransition(withVelocity velocity: CGPoint) {
+	private func completeInteractiveStyleTransition(withVelocity velocity: CGPoint) {
 		guard let snapshotMaskLayer = snapshotMaskLayer else {
 			return
 		}
@@ -239,7 +239,7 @@ class TransitionCoordinator: NSObject {
 		}
 	}
 	
-	fileprivate func cleanupAfterInteractiveStyleTransition() {
+	private func cleanupAfterInteractiveStyleTransition() {
 		self.previousStyleViewSnapshot?.removeFromSuperview()
 		self.previousStyleViewSnapshot = nil
 		self.snapshotMaskLayer = nil
