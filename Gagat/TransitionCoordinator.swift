@@ -74,10 +74,10 @@ class TransitionCoordinator: NSObject {
 	/// As the transition progresses, less and less of the snapshot view
 	/// will be visible, revealing more of the real view which is styled
 	/// with the new style.
-	private var previousStyleViewSnapshot: UIView?
+	private var previousStyleTargetViewSnapshot: UIView?
 	
 	/// During the interactive transition, this property contains the layer
-	/// used to mask the contents of `previousStyleViewSnapshot`.
+	/// used to mask the contents of `previousStyleTargetViewSnapshot`.
 	/// When the user pans, the position and path of `snapshotMaskLayer` is
 	/// adjusted to reflect the current translation of the pan recognizer.
 	private var snapshotMaskLayer: CAShapeLayer?
@@ -85,9 +85,9 @@ class TransitionCoordinator: NSObject {
 	private func beginInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
 		// We snapshot the targetView before applying the new style, and make sure
 		// it's positioned on top of all the other content.
-		previousStyleViewSnapshot = targetView.snapshotView(afterScreenUpdates: false)
-		targetView.addSubview(previousStyleViewSnapshot!)
-		targetView.bringSubview(toFront: previousStyleViewSnapshot!)
+		previousStyleTargetViewSnapshot = targetView.snapshotView(afterScreenUpdates: false)
+		targetView.addSubview(previousStyleTargetViewSnapshot!)
+		targetView.bringSubview(toFront: previousStyleTargetViewSnapshot!)
 		
 		// When we have the snapshot we create a new mask layer that's used to
 		// control how much of the previous view we display as the transition
@@ -95,7 +95,7 @@ class TransitionCoordinator: NSObject {
 		snapshotMaskLayer = CAShapeLayer()
 		snapshotMaskLayer?.path = UIBezierPath(rect: targetView.bounds).cgPath
 		snapshotMaskLayer?.fillColor = UIColor.black.cgColor
-		previousStyleViewSnapshot?.layer.mask = snapshotMaskLayer
+		previousStyleTargetViewSnapshot?.layer.mask = snapshotMaskLayer
 		
 		// Now we're free to apply the new style. This won't be visible until
 		// the user pans more since the snapshot is displayed on top of the
@@ -240,8 +240,8 @@ class TransitionCoordinator: NSObject {
 	}
 	
 	private func cleanupAfterInteractiveStyleTransition() {
-		self.previousStyleViewSnapshot?.removeFromSuperview()
-		self.previousStyleViewSnapshot = nil
+		self.previousStyleTargetViewSnapshot?.removeFromSuperview()
+		self.previousStyleTargetViewSnapshot = nil
 		self.snapshotMaskLayer = nil
 	}
 }
