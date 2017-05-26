@@ -60,6 +60,8 @@ class TransitionCoordinator: NSObject {
 			adjustMaskLayer(basedOn: panRecognizer)
 		case .ended, .failed:
 			endInteractiveStyleTransition(withPanRecognizer: panRecognizer)
+		case .cancelled:
+			cancelInteractiveStyleTransitionWithoutAnimation()
 		default: break
 		}
 	}
@@ -193,6 +195,12 @@ class TransitionCoordinator: NSObject {
 		} else {
 			cancelInteractiveStyleTransition(withVelocity: velocity)
 		}
+	}
+
+	private func cancelInteractiveStyleTransitionWithoutAnimation() {
+		styleableObject.applyNextStyle()
+		cleanupAfterInteractiveStyleTransition()
+		state = .idle
 	}
 	
 	fileprivate func cancelInteractiveStyleTransition(withVelocity velocity: CGPoint) {
