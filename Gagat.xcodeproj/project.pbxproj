@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		933467781ED75FD00073514D /* PessimisticPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessimisticPanGestureRecognizer.swift; sourceTree = "<group>"; };
-		9386EDDA1E577236009079B6 /* Gagat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gagat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9386EDDA1E577236009079B6 /* Gagat Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gagat Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9386EDDD1E577236009079B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9386EDDF1E577236009079B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9386EDE21E577236009079B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		9386EDDB1E577236009079B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9386EDDA1E577236009079B6 /* Gagat.app */,
+				9386EDDA1E577236009079B6 /* Gagat Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,9 +87,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9386EDD91E577236009079B6 /* Gagat */ = {
+		9386EDD91E577236009079B6 /* Gagat Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9386EDEC1E577236009079B6 /* Build configuration list for PBXNativeTarget "Gagat" */;
+			buildConfigurationList = 9386EDEC1E577236009079B6 /* Build configuration list for PBXNativeTarget "Gagat Example" */;
 			buildPhases = (
 				9386EDD61E577236009079B6 /* Sources */,
 				9386EDD71E577236009079B6 /* Frameworks */,
@@ -99,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = Gagat;
+			name = "Gagat Example";
 			productName = Gagat;
-			productReference = 9386EDDA1E577236009079B6 /* Gagat.app */;
+			productReference = 9386EDDA1E577236009079B6 /* Gagat Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9386EDD91E577236009079B6 /* Gagat */,
+				9386EDD91E577236009079B6 /* Gagat Example */,
 			);
 		};
 /* End PBXProject section */
@@ -319,13 +319,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9386EDEC1E577236009079B6 /* Build configuration list for PBXNativeTarget "Gagat" */ = {
+		9386EDEC1E577236009079B6 /* Build configuration list for PBXNativeTarget "Gagat Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9386EDED1E577236009079B6 /* Debug */,
 				9386EDEE1E577236009079B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
