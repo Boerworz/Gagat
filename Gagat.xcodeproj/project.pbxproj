@@ -7,33 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9390062C1EE2024700BF6787 /* AnimationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006201EE2024700BF6787 /* AnimationUtilities.swift */; };
 		9390062D1EE2024700BF6787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006211EE2024700BF6787 /* AppDelegate.swift */; };
 		9390062E1EE2024700BF6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939006221EE2024700BF6787 /* Assets.xcassets */; };
-		939006311EE2024700BF6787 /* Gagat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006271EE2024700BF6787 /* Gagat.swift */; };
-		939006331EE2024700BF6787 /* PessimisticPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006291EE2024700BF6787 /* PessimisticPanGestureRecognizer.swift */; };
-		939006341EE2024700BF6787 /* TransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390062A1EE2024700BF6787 /* TransitionCoordinator.swift */; };
 		939006351EE2024700BF6787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390062B1EE2024700BF6787 /* ViewController.swift */; };
 		939006361EE2029E00BF6787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939006231EE2024700BF6787 /* LaunchScreen.storyboard */; };
 		939006371EE2029E00BF6787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939006251EE2024700BF6787 /* Main.storyboard */; };
+		939006421EE2038900BF6787 /* Gagat.h in Headers */ = {isa = PBXBuildFile; fileRef = 939006401EE2038900BF6787 /* Gagat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		939006451EE2038900BF6787 /* Gagat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9390063E1EE2038900BF6787 /* Gagat.framework */; };
+		939006471EE2038900BF6787 /* Gagat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9390063E1EE2038900BF6787 /* Gagat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9390064F1EE203BF00BF6787 /* AnimationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064B1EE203BF00BF6787 /* AnimationUtilities.swift */; };
+		939006501EE203BF00BF6787 /* Gagat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064C1EE203BF00BF6787 /* Gagat.swift */; };
+		939006511EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064D1EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift */; };
+		939006521EE203BF00BF6787 /* TransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064E1EE203BF00BF6787 /* TransitionCoordinator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		939006431EE2038900BF6787 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9386EDD21E577236009079B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9390063D1EE2038900BF6787;
+			remoteInfo = Gagat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		939006461EE2038900BF6787 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				939006471EE2038900BF6787 /* Gagat.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9386EDDA1E577236009079B6 /* Gagat Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gagat Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		939006201EE2024700BF6787 /* AnimationUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationUtilities.swift; sourceTree = "<group>"; };
 		939006211EE2024700BF6787 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		939006221EE2024700BF6787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		939006241EE2024700BF6787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		939006261EE2024700BF6787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		939006271EE2024700BF6787 /* Gagat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gagat.swift; sourceTree = "<group>"; };
 		939006281EE2024700BF6787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		939006291EE2024700BF6787 /* PessimisticPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessimisticPanGestureRecognizer.swift; sourceTree = "<group>"; };
-		9390062A1EE2024700BF6787 /* TransitionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCoordinator.swift; sourceTree = "<group>"; };
 		9390062B1EE2024700BF6787 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9390063E1EE2038900BF6787 /* Gagat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gagat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		939006401EE2038900BF6787 /* Gagat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gagat.h; sourceTree = "<group>"; };
+		939006411EE2038900BF6787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9390064B1EE203BF00BF6787 /* AnimationUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationUtilities.swift; sourceTree = "<group>"; };
+		9390064C1EE203BF00BF6787 /* Gagat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gagat.swift; sourceTree = "<group>"; };
+		9390064D1EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessimisticPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		9390064E1EE203BF00BF6787 /* TransitionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9386EDD71E577236009079B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939006451EE2038900BF6787 /* Gagat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9390063A1EE2038900BF6787 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				9390061F1EE2024700BF6787 /* Gagat Example */,
+				9390063F1EE2038900BF6787 /* Gagat */,
 				9386EDDB1E577236009079B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9386EDDA1E577236009079B6 /* Gagat Example.app */,
+				9390063E1EE2038900BF6787 /* Gagat.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,21 +102,41 @@
 		9390061F1EE2024700BF6787 /* Gagat Example */ = {
 			isa = PBXGroup;
 			children = (
-				939006201EE2024700BF6787 /* AnimationUtilities.swift */,
 				939006211EE2024700BF6787 /* AppDelegate.swift */,
 				939006221EE2024700BF6787 /* Assets.xcassets */,
 				939006231EE2024700BF6787 /* LaunchScreen.storyboard */,
 				939006251EE2024700BF6787 /* Main.storyboard */,
-				939006271EE2024700BF6787 /* Gagat.swift */,
 				939006281EE2024700BF6787 /* Info.plist */,
-				939006291EE2024700BF6787 /* PessimisticPanGestureRecognizer.swift */,
-				9390062A1EE2024700BF6787 /* TransitionCoordinator.swift */,
 				9390062B1EE2024700BF6787 /* ViewController.swift */,
 			);
 			path = "Gagat Example";
 			sourceTree = "<group>";
 		};
+		9390063F1EE2038900BF6787 /* Gagat */ = {
+			isa = PBXGroup;
+			children = (
+				9390064B1EE203BF00BF6787 /* AnimationUtilities.swift */,
+				9390064C1EE203BF00BF6787 /* Gagat.swift */,
+				9390064D1EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift */,
+				9390064E1EE203BF00BF6787 /* TransitionCoordinator.swift */,
+				939006401EE2038900BF6787 /* Gagat.h */,
+				939006411EE2038900BF6787 /* Info.plist */,
+			);
+			path = Gagat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9390063B1EE2038900BF6787 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939006421EE2038900BF6787 /* Gagat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9386EDD91E577236009079B6 /* Gagat Example */ = {
@@ -86,15 +146,35 @@
 				9386EDD61E577236009079B6 /* Sources */,
 				9386EDD71E577236009079B6 /* Frameworks */,
 				9386EDD81E577236009079B6 /* Resources */,
+				939006461EE2038900BF6787 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				939006441EE2038900BF6787 /* PBXTargetDependency */,
 			);
 			name = "Gagat Example";
 			productName = Gagat;
 			productReference = 9386EDDA1E577236009079B6 /* Gagat Example.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9390063D1EE2038900BF6787 /* Gagat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 939006481EE2038900BF6787 /* Build configuration list for PBXNativeTarget "Gagat" */;
+			buildPhases = (
+				939006391EE2038900BF6787 /* Sources */,
+				9390063A1EE2038900BF6787 /* Frameworks */,
+				9390063B1EE2038900BF6787 /* Headers */,
+				9390063C1EE2038900BF6787 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gagat;
+			productName = Gagat;
+			productReference = 9390063E1EE2038900BF6787 /* Gagat.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +189,12 @@
 					9386EDD91E577236009079B6 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 666L949UND;
+						ProvisioningStyle = Automatic;
+					};
+					9390063D1EE2038900BF6787 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 666L949UND;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,6 +213,7 @@
 			projectRoot = "";
 			targets = (
 				9386EDD91E577236009079B6 /* Gagat Example */,
+				9390063D1EE2038900BF6787 /* Gagat */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +229,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9390063C1EE2038900BF6787 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -151,14 +245,29 @@
 			files = (
 				939006351EE2024700BF6787 /* ViewController.swift in Sources */,
 				9390062D1EE2024700BF6787 /* AppDelegate.swift in Sources */,
-				9390062C1EE2024700BF6787 /* AnimationUtilities.swift in Sources */,
-				939006311EE2024700BF6787 /* Gagat.swift in Sources */,
-				939006341EE2024700BF6787 /* TransitionCoordinator.swift in Sources */,
-				939006331EE2024700BF6787 /* PessimisticPanGestureRecognizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		939006391EE2038900BF6787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939006501EE203BF00BF6787 /* Gagat.swift in Sources */,
+				939006521EE203BF00BF6787 /* TransitionCoordinator.swift in Sources */,
+				939006511EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift in Sources */,
+				9390064F1EE203BF00BF6787 /* AnimationUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		939006441EE2038900BF6787 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9390063D1EE2038900BF6787 /* Gagat */;
+			targetProxy = 939006431EE2038900BF6787 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		939006231EE2024700BF6787 /* LaunchScreen.storyboard */ = {
@@ -276,11 +385,12 @@
 		9386EDED1E577236009079B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 666L949UND;
 				INFOPLIST_FILE = "Gagat Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.Gagat;
+				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.GagatExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -289,13 +399,65 @@
 		9386EDEE1E577236009079B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 666L949UND;
 				INFOPLIST_FILE = "Gagat Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.Gagat;
+				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.GagatExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		939006491EE2038900BF6787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 666L949UND;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Gagat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.Gagat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9390064A1EE2038900BF6787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 666L949UND;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Gagat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.Gagat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -319,6 +481,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		939006481EE2038900BF6787 /* Build configuration list for PBXNativeTarget "Gagat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939006491EE2038900BF6787 /* Debug */,
+				9390064A1EE2038900BF6787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

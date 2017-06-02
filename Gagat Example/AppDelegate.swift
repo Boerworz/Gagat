@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Gagat
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

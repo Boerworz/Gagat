@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Gagat
 
 class ViewController: UIViewController, GagatStyleable {
 	private var useDarkMode: Bool = false {
