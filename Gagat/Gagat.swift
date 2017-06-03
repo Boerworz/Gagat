@@ -9,33 +9,37 @@
 import Foundation
 import UIKit
 
-protocol GagatStyleable {
+public protocol GagatStyleable {
 	func toggleActiveStyle()
 }
 
-struct Gagat {
+public struct Gagat {
 	
-	struct Configuration {
-		let jellyFactor: Double
+	public struct Configuration {
+		public let jellyFactor: Double
 
-		static var defaults: Configuration {
+		public init(jellyFactor: Double) {
+			self.jellyFactor = jellyFactor
+		}
+
+		public static var defaults: Configuration {
 			return Configuration(jellyFactor: 1.0)
 		}
 	}
 	
-	struct TransitionHandle {
+	public struct TransitionHandle {
 		private let coordinator: TransitionCoordinator
 		
 		fileprivate init(coordinator: TransitionCoordinator) {
 			self.coordinator = coordinator
 		}
 
-		var panGestureRecognizer: UIPanGestureRecognizer {
+		public var panGestureRecognizer: UIPanGestureRecognizer {
 			return coordinator.panGestureRecognizer
 		}
 	}
 	
-	static func configure(for window: UIWindow, using configuration: Configuration = .defaults) -> TransitionHandle? {
+	public static func configure(for window: UIWindow, using configuration: Configuration = .defaults) -> TransitionHandle? {
 		guard let rootViewController = window.rootViewController else {
 			assert(false, "Gagat Error: \(window) does not have a root view controller.")
 			return nil
