@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9390062D1EE2024700BF6787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006211EE2024700BF6787 /* AppDelegate.swift */; };
 		9390062E1EE2024700BF6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939006221EE2024700BF6787 /* Assets.xcassets */; };
-		939006351EE2024700BF6787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390062B1EE2024700BF6787 /* ViewController.swift */; };
 		939006361EE2029E00BF6787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939006231EE2024700BF6787 /* LaunchScreen.storyboard */; };
 		939006371EE2029E00BF6787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939006251EE2024700BF6787 /* Main.storyboard */; };
 		939006421EE2038900BF6787 /* Gagat.h in Headers */ = {isa = PBXBuildFile; fileRef = 939006401EE2038900BF6787 /* Gagat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,6 +18,9 @@
 		939006501EE203BF00BF6787 /* Gagat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064C1EE203BF00BF6787 /* Gagat.swift */; };
 		939006511EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064D1EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift */; };
 		939006521EE203BF00BF6787 /* TransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9390064E1EE203BF00BF6787 /* TransitionCoordinator.swift */; };
+		939006A51EE2B15D00BF6787 /* ArchiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006A41EE2B15D00BF6787 /* ArchiveTableViewController.swift */; };
+		939006A71EE2B17800BF6787 /* ArchiveTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006A61EE2B17800BF6787 /* ArchiveTableCellView.swift */; };
+		939006A91EE2B36100BF6787 /* StyleableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006A81EE2B36100BF6787 /* StyleableNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,6 @@
 		939006241EE2024700BF6787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		939006261EE2024700BF6787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		939006281EE2024700BF6787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9390062B1EE2024700BF6787 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9390063E1EE2038900BF6787 /* Gagat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gagat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939006401EE2038900BF6787 /* Gagat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gagat.h; sourceTree = "<group>"; };
 		939006411EE2038900BF6787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +61,9 @@
 		9390064C1EE203BF00BF6787 /* Gagat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gagat.swift; sourceTree = "<group>"; };
 		9390064D1EE203BF00BF6787 /* PessimisticPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessimisticPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		9390064E1EE203BF00BF6787 /* TransitionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCoordinator.swift; sourceTree = "<group>"; };
+		939006A41EE2B15D00BF6787 /* ArchiveTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveTableViewController.swift; sourceTree = "<group>"; };
+		939006A61EE2B17800BF6787 /* ArchiveTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveTableCellView.swift; sourceTree = "<group>"; };
+		939006A81EE2B36100BF6787 /* StyleableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				939006211EE2024700BF6787 /* AppDelegate.swift */,
+				939006A41EE2B15D00BF6787 /* ArchiveTableViewController.swift */,
+				939006A61EE2B17800BF6787 /* ArchiveTableCellView.swift */,
+				939006A81EE2B36100BF6787 /* StyleableNavigationController.swift */,
+				939006251EE2024700BF6787 /* Main.storyboard */,
 				939006221EE2024700BF6787 /* Assets.xcassets */,
 				939006231EE2024700BF6787 /* LaunchScreen.storyboard */,
-				939006251EE2024700BF6787 /* Main.storyboard */,
 				939006281EE2024700BF6787 /* Info.plist */,
-				9390062B1EE2024700BF6787 /* ViewController.swift */,
 			);
 			path = "Gagat Example";
 			sourceTree = "<group>";
@@ -241,8 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939006351EE2024700BF6787 /* ViewController.swift in Sources */,
+				939006A51EE2B15D00BF6787 /* ArchiveTableViewController.swift in Sources */,
+				939006A71EE2B17800BF6787 /* ArchiveTableCellView.swift in Sources */,
 				9390062D1EE2024700BF6787 /* AppDelegate.swift in Sources */,
+				939006A91EE2B36100BF6787 /* StyleableNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

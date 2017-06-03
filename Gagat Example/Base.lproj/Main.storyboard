@@ -1,26 +1,228 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w2X-IX-Q0Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Styleable Navigation Controller-->
+        <scene sceneID="jsa-vy-xBN">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="w2X-IX-Q0Z" customClass="StyleableNavigationController" customModule="Gagat_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdq-12-zIv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qTA-NM-0Yh" kind="relationship" relationship="rootViewController" id="icg-NF-nSs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cky-j5-8dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="123"/>
+        </scene>
+        <!--Archive-->
+        <scene sceneID="neY-O5-z2q">
+            <objects>
+                <tableViewController title="Archive" id="qTA-NM-0Yh" customClass="ArchiveTableViewController" customModule="Gagat_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="94" sectionHeaderHeight="18" sectionFooterHeight="18" id="CrL-Lx-G2g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="bKy-fT-GNx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="kZq-wj-Ib4" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kZq-wj-Ib4" id="h7Z-Q2-PId">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If I Were You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zy-nj-Xvb">
+                                                    <rect key="frame" x="104" y="36" width="96" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ifiwereyou" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-zk-AeX">
+                                                    <rect key="frame" x="20" y="15" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="I37-1b-aOn"/>
+                                                        <constraint firstAttribute="width" secondItem="4vx-zk-AeX" secondAttribute="height" multiplier="1:1" id="OLB-Rp-a9Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Zy-nj-Xvb" firstAttribute="centerY" secondItem="h7Z-Q2-PId" secondAttribute="centerY" id="5ne-TP-8xV"/>
+                                                <constraint firstItem="4vx-zk-AeX" firstAttribute="leading" secondItem="h7Z-Q2-PId" secondAttribute="leading" constant="20" id="Co0-TS-X4p"/>
+                                                <constraint firstItem="6Zy-nj-Xvb" firstAttribute="leading" secondItem="4vx-zk-AeX" secondAttribute="trailing" constant="20" id="hnh-Qj-2Xw"/>
+                                                <constraint firstItem="4vx-zk-AeX" firstAttribute="centerY" secondItem="h7Z-Q2-PId" secondAttribute="centerY" id="hsz-aj-wbT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artworkImageView" destination="4vx-zk-AeX" id="iHs-dC-f1t"/>
+                                            <outlet property="label" destination="6Zy-nj-Xvb" id="ZoX-Qj-WhS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="yCO-4E-6Vh" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="129" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yCO-4E-6Vh" id="Ub9-Jk-WYO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radiolab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHi-vI-d55">
+                                                    <rect key="frame" x="104" y="36" width="67" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radiolab" translatesAutoresizingMaskIntoConstraints="NO" id="BM8-aG-FF6">
+                                                    <rect key="frame" x="20" y="15" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="BM8-aG-FF6" secondAttribute="height" multiplier="1:1" id="2Aa-BY-R7m"/>
+                                                        <constraint firstAttribute="width" constant="64" id="tlb-YB-TNM"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BM8-aG-FF6" firstAttribute="centerY" secondItem="Ub9-Jk-WYO" secondAttribute="centerY" id="AxU-sE-yuz"/>
+                                                <constraint firstItem="XHi-vI-d55" firstAttribute="leading" secondItem="BM8-aG-FF6" secondAttribute="trailing" constant="20" id="PvA-J3-tuo"/>
+                                                <constraint firstItem="BM8-aG-FF6" firstAttribute="leading" secondItem="Ub9-Jk-WYO" secondAttribute="leading" constant="20" id="aKI-pc-PYI"/>
+                                                <constraint firstItem="XHi-vI-d55" firstAttribute="centerY" secondItem="Ub9-Jk-WYO" secondAttribute="centerY" id="doB-k5-7zs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artworkImageView" destination="BM8-aG-FF6" id="LKA-c2-leJ"/>
+                                            <outlet property="label" destination="XHi-vI-d55" id="FFL-W5-sXU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="uW0-iX-nRb" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="223" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uW0-iX-nRb" id="07p-pv-ggJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appodden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ass-ej-gOy">
+                                                    <rect key="frame" x="104" y="36" width="80" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appodden" translatesAutoresizingMaskIntoConstraints="NO" id="soU-bW-OE7">
+                                                    <rect key="frame" x="20" y="15" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="soU-bW-OE7" secondAttribute="height" multiplier="1:1" id="K9j-0R-ZPW"/>
+                                                        <constraint firstAttribute="width" constant="64" id="zJM-aw-QyA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="soU-bW-OE7" firstAttribute="centerY" secondItem="07p-pv-ggJ" secondAttribute="centerY" id="2bL-4E-M7s"/>
+                                                <constraint firstItem="Ass-ej-gOy" firstAttribute="centerY" secondItem="07p-pv-ggJ" secondAttribute="centerY" id="C4K-Uz-UiM"/>
+                                                <constraint firstItem="Ass-ej-gOy" firstAttribute="leading" secondItem="soU-bW-OE7" secondAttribute="trailing" constant="20" id="dh9-Ww-oyl"/>
+                                                <constraint firstItem="soU-bW-OE7" firstAttribute="leading" secondItem="07p-pv-ggJ" secondAttribute="leading" constant="20" id="nbc-Tk-tzk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artworkImageView" destination="soU-bW-OE7" id="Ub5-PJ-mzq"/>
+                                            <outlet property="label" destination="Ass-ej-gOy" id="Vli-a3-mNx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="JOU-rN-WzC" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="317" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JOU-rN-WzC" id="vee-di-gow">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love + Radio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-n5-7D8">
+                                                    <rect key="frame" x="104" y="36" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loveandradio" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-wx-Kds">
+                                                    <rect key="frame" x="20" y="15" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="tfE-wx-Kds" secondAttribute="height" multiplier="1:1" id="Bk4-pj-97G"/>
+                                                        <constraint firstAttribute="width" constant="64" id="aez-bb-ePy"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FRE-n5-7D8" firstAttribute="centerY" secondItem="vee-di-gow" secondAttribute="centerY" id="8R3-Sy-K5L"/>
+                                                <constraint firstItem="tfE-wx-Kds" firstAttribute="leading" secondItem="vee-di-gow" secondAttribute="leading" constant="20" id="GsM-Sv-RDf"/>
+                                                <constraint firstItem="tfE-wx-Kds" firstAttribute="centerY" secondItem="vee-di-gow" secondAttribute="centerY" id="Qi4-1w-Wgr"/>
+                                                <constraint firstItem="FRE-n5-7D8" firstAttribute="leading" secondItem="tfE-wx-Kds" secondAttribute="trailing" constant="20" id="Shn-hM-Yrv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artworkImageView" destination="tfE-wx-Kds" id="tFn-Io-pak"/>
+                                            <outlet property="label" destination="FRE-n5-7D8" id="27s-fO-3U7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="tMt-YQ-lK0" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="411" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tMt-YQ-lK0" id="gd4-hl-f8w">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Four" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-B4-Yf8">
+                                                    <rect key="frame" x="104" y="36" width="68" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topfour" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-jQ-qvk">
+                                                    <rect key="frame" x="20" y="15" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="gxK-j9-1ua"/>
+                                                        <constraint firstAttribute="width" secondItem="J5R-jQ-qvk" secondAttribute="height" multiplier="1:1" id="yiw-uc-CNA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J5R-jQ-qvk" firstAttribute="centerY" secondItem="gd4-hl-f8w" secondAttribute="centerY" id="KEE-qA-UsI"/>
+                                                <constraint firstItem="Um5-B4-Yf8" firstAttribute="centerY" secondItem="gd4-hl-f8w" secondAttribute="centerY" id="TaV-w2-8sp"/>
+                                                <constraint firstItem="J5R-jQ-qvk" firstAttribute="leading" secondItem="gd4-hl-f8w" secondAttribute="leading" constant="20" id="UnN-tX-3bO"/>
+                                                <constraint firstItem="Um5-B4-Yf8" firstAttribute="leading" secondItem="J5R-jQ-qvk" secondAttribute="trailing" constant="20" id="XBq-Bq-qKf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artworkImageView" destination="J5R-jQ-qvk" id="pGL-ex-afN"/>
+                                            <outlet property="label" destination="Um5-B4-Yf8" id="dmm-nZ-Xdc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qTA-NM-0Yh" id="kJL-X1-Dmy"/>
+                            <outlet property="delegate" destination="qTA-NM-0Yh" id="Imb-Sg-YZZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Archive" id="po8-sR-mBp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmV-Fp-Vyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="815" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appodden" width="64" height="64"/>
+        <image name="ifiwereyou" width="64" height="64"/>
+        <image name="loveandradio" width="64" height="64"/>
+        <image name="radiolab" width="64" height="64"/>
+        <image name="topfour" width="64" height="64"/>
+    </resources>
 </document>
