@@ -39,6 +39,10 @@ class TransitionCoordinator: NSObject {
 
 		setupPanGestureRecognizer(in: targetView)
 	}
+
+	deinit {
+		panGestureRecognizer.view?.removeGestureRecognizer(panGestureRecognizer)
+	}
 	
 	// MARK: - Pan gesture recognizer
 
