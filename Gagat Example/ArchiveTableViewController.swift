@@ -38,9 +38,9 @@ class ArchiveTableViewController: UITableViewController, UIGestureRecognizerDele
     // MARK: - Applying styles
 
 	private struct Style {
-		var navigationBarStyle: UIBarStyle
-		var statusBarStyle: UIStatusBarStyle
-		var tableViewStyle: TableViewStyle
+		let navigationBarStyle: UIBarStyle
+		let statusBarStyle: UIStatusBarStyle
+		let tableViewStyle: TableViewStyle
 
 		static let dark = Style(
 			navigationBarStyle: .black,
@@ -56,9 +56,9 @@ class ArchiveTableViewController: UITableViewController, UIGestureRecognizerDele
 	}
 
 	private struct TableViewStyle {
-		var backgroundColor: UIColor
-		var separatorColor: UIColor?
-		var cellStyle: ArchiveTableCellView.Style
+		let backgroundColor: UIColor
+		let separatorColor: UIColor?
+		let cellStyle: ArchiveTableCellView.Style
 
 		static let dark = TableViewStyle(
 			backgroundColor: UIColor(white: 0.15, alpha: 1.0),

@@ -11,9 +11,9 @@ import UIKit
 class ArchiveTableCellView: UITableViewCell {
 
 	struct Style {
-		var backgroundColor: UIColor
-		var titleTextColor: UIColor
-		var descriptionTextColor: UIColor
+		let backgroundColor: UIColor
+		let titleTextColor: UIColor
+		let descriptionTextColor: UIColor
 
 		static let light = Style(
 			backgroundColor: .white,
