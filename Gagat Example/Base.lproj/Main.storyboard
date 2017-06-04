@@ -51,7 +51,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ifiwereyou" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-zk-AeX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ifiwereyou" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-zk-AeX">
                                                     <rect key="frame" x="20" y="15" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="I37-1b-aOn"/>
@@ -84,7 +84,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radiolab" translatesAutoresizingMaskIntoConstraints="NO" id="BM8-aG-FF6">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radiolab" translatesAutoresizingMaskIntoConstraints="NO" id="BM8-aG-FF6">
                                                     <rect key="frame" x="20" y="15" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="BM8-aG-FF6" secondAttribute="height" multiplier="1:1" id="2Aa-BY-R7m"/>
@@ -117,7 +117,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appodden" translatesAutoresizingMaskIntoConstraints="NO" id="soU-bW-OE7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appodden" translatesAutoresizingMaskIntoConstraints="NO" id="soU-bW-OE7">
                                                     <rect key="frame" x="20" y="15" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="soU-bW-OE7" secondAttribute="height" multiplier="1:1" id="K9j-0R-ZPW"/>
@@ -150,7 +150,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loveandradio" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-wx-Kds">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loveandradio" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-wx-Kds">
                                                     <rect key="frame" x="20" y="15" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="tfE-wx-Kds" secondAttribute="height" multiplier="1:1" id="Bk4-pj-97G"/>
@@ -183,7 +183,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nancy" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-jQ-qvk">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nancy" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-jQ-qvk">
                                                     <rect key="frame" x="20" y="15" width="64" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="gxK-j9-1ua"/>
