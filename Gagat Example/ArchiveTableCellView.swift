@@ -28,9 +28,9 @@ class ArchiveTableCellView: UITableViewCell {
 		)
 	}
 
-    @IBOutlet fileprivate weak var titleLabel: UILabel?
-    @IBOutlet fileprivate weak var artworkImageView: UIImageView?
-	@IBOutlet fileprivate weak var descriptionLabel: UILabel?
+    @IBOutlet private weak var titleLabel: UILabel?
+    @IBOutlet private weak var artworkImageView: UIImageView?
+	@IBOutlet private weak var descriptionLabel: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
