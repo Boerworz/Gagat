@@ -28,19 +28,19 @@ class ArchiveTableCellView: UITableViewCell {
 		)
 	}
 
-    @IBOutlet private weak var titleLabel: UILabel?
-    @IBOutlet private weak var artworkImageView: UIImageView?
-	@IBOutlet private weak var descriptionLabel: UILabel?
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var artworkImageView: UIImageView!
+	@IBOutlet private weak var descriptionLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        artworkImageView?.layer.cornerRadius = 10.0
+        artworkImageView.layer.cornerRadius = 10.0
     }
 
     func apply(style: Style) {
         backgroundColor = style.backgroundColor
-        titleLabel?.textColor = style.titleTextColor
-		descriptionLabel?.textColor = style.descriptionTextColor
+        titleLabel.textColor = style.titleTextColor
+		descriptionLabel.textColor = style.descriptionTextColor
     }
 
 }
