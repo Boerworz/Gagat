@@ -46,8 +46,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If I Were You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zy-nj-Xvb">
-                                                    <rect key="frame" x="104" y="36" width="96" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="104" y="19" width="101.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -58,17 +58,27 @@
                                                         <constraint firstAttribute="width" secondItem="4vx-zk-AeX" secondAttribute="height" multiplier="1:1" id="OLB-Rp-a9Q"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jake and Amir offer advice in areas they’re qualified to talk about." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCv-aU-A3Y">
+                                                    <rect key="frame" x="104" y="44" width="251" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000868055558" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6Zy-nj-Xvb" firstAttribute="centerY" secondItem="h7Z-Q2-PId" secondAttribute="centerY" id="5ne-TP-8xV"/>
+                                                <constraint firstItem="pCv-aU-A3Y" firstAttribute="top" secondItem="6Zy-nj-Xvb" secondAttribute="bottom" constant="4" id="CII-9m-oON"/>
                                                 <constraint firstItem="4vx-zk-AeX" firstAttribute="leading" secondItem="h7Z-Q2-PId" secondAttribute="leading" constant="20" id="Co0-TS-X4p"/>
+                                                <constraint firstItem="pCv-aU-A3Y" firstAttribute="leading" secondItem="4vx-zk-AeX" secondAttribute="trailing" constant="20" id="H5Z-vP-tnd"/>
+                                                <constraint firstAttribute="trailing" secondItem="pCv-aU-A3Y" secondAttribute="trailing" constant="20" id="dF6-W6-YQ7"/>
                                                 <constraint firstItem="6Zy-nj-Xvb" firstAttribute="leading" secondItem="4vx-zk-AeX" secondAttribute="trailing" constant="20" id="hnh-Qj-2Xw"/>
                                                 <constraint firstItem="4vx-zk-AeX" firstAttribute="centerY" secondItem="h7Z-Q2-PId" secondAttribute="centerY" id="hsz-aj-wbT"/>
+                                                <constraint firstItem="6Zy-nj-Xvb" firstAttribute="top" secondItem="4vx-zk-AeX" secondAttribute="top" constant="4" id="mbI-fI-5NM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artworkImageView" destination="4vx-zk-AeX" id="iHs-dC-f1t"/>
-                                            <outlet property="label" destination="6Zy-nj-Xvb" id="ZoX-Qj-WhS"/>
+                                            <outlet property="descriptionLabel" destination="pCv-aU-A3Y" id="RhH-FO-gxk"/>
+                                            <outlet property="titleLabel" destination="6Zy-nj-Xvb" id="vit-cI-H19"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="yCO-4E-6Vh" userLabel="Radiolab Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
@@ -79,8 +89,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radiolab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHi-vI-d55">
-                                                    <rect key="frame" x="104" y="36" width="67" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="104" y="19" width="71.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -91,17 +101,27 @@
                                                         <constraint firstAttribute="width" constant="64" id="tlb-YB-TNM"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radiolab is an investigation told through sounds and stories, and centered around one big idea." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v1-cd-ZDd">
+                                                    <rect key="frame" x="104" y="44" width="251" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="BM8-aG-FF6" firstAttribute="centerY" secondItem="Ub9-Jk-WYO" secondAttribute="centerY" id="AxU-sE-yuz"/>
+                                                <constraint firstItem="3v1-cd-ZDd" firstAttribute="top" secondItem="XHi-vI-d55" secondAttribute="bottom" constant="4" id="Mm2-OZ-fPb"/>
                                                 <constraint firstItem="XHi-vI-d55" firstAttribute="leading" secondItem="BM8-aG-FF6" secondAttribute="trailing" constant="20" id="PvA-J3-tuo"/>
                                                 <constraint firstItem="BM8-aG-FF6" firstAttribute="leading" secondItem="Ub9-Jk-WYO" secondAttribute="leading" constant="20" id="aKI-pc-PYI"/>
-                                                <constraint firstItem="XHi-vI-d55" firstAttribute="centerY" secondItem="Ub9-Jk-WYO" secondAttribute="centerY" id="doB-k5-7zs"/>
+                                                <constraint firstAttribute="trailing" secondItem="3v1-cd-ZDd" secondAttribute="trailing" constant="20" id="j4Q-yR-5HG"/>
+                                                <constraint firstItem="3v1-cd-ZDd" firstAttribute="leading" secondItem="BM8-aG-FF6" secondAttribute="trailing" constant="20" id="kH0-P6-GBF"/>
+                                                <constraint firstItem="XHi-vI-d55" firstAttribute="top" secondItem="BM8-aG-FF6" secondAttribute="top" constant="4" id="uND-Aa-crS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artworkImageView" destination="BM8-aG-FF6" id="LKA-c2-leJ"/>
-                                            <outlet property="label" destination="XHi-vI-d55" id="FFL-W5-sXU"/>
+                                            <outlet property="descriptionLabel" destination="3v1-cd-ZDd" id="6PH-zV-XYY"/>
+                                            <outlet property="titleLabel" destination="XHi-vI-d55" id="aVD-ti-u2I"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="uW0-iX-nRb" userLabel="Appodden Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
@@ -112,8 +132,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appodden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ass-ej-gOy">
-                                                    <rect key="frame" x="104" y="36" width="80" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="104" y="19" width="85" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -124,17 +144,27 @@
                                                         <constraint firstAttribute="width" constant="64" id="zJM-aw-QyA"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En podcast om att driva en liten app-studio i Stockholm." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUF-qj-Sjm">
+                                                    <rect key="frame" x="104" y="44" width="251" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="soU-bW-OE7" firstAttribute="centerY" secondItem="07p-pv-ggJ" secondAttribute="centerY" id="2bL-4E-M7s"/>
-                                                <constraint firstItem="Ass-ej-gOy" firstAttribute="centerY" secondItem="07p-pv-ggJ" secondAttribute="centerY" id="C4K-Uz-UiM"/>
+                                                <constraint firstItem="BUF-qj-Sjm" firstAttribute="top" secondItem="Ass-ej-gOy" secondAttribute="bottom" constant="4" id="514-0a-SdS"/>
+                                                <constraint firstAttribute="trailing" secondItem="BUF-qj-Sjm" secondAttribute="trailing" constant="20" id="F1g-f1-d6r"/>
+                                                <constraint firstItem="Ass-ej-gOy" firstAttribute="top" secondItem="soU-bW-OE7" secondAttribute="top" constant="4" id="W6e-Ld-O6U"/>
                                                 <constraint firstItem="Ass-ej-gOy" firstAttribute="leading" secondItem="soU-bW-OE7" secondAttribute="trailing" constant="20" id="dh9-Ww-oyl"/>
                                                 <constraint firstItem="soU-bW-OE7" firstAttribute="leading" secondItem="07p-pv-ggJ" secondAttribute="leading" constant="20" id="nbc-Tk-tzk"/>
+                                                <constraint firstItem="BUF-qj-Sjm" firstAttribute="leading" secondItem="soU-bW-OE7" secondAttribute="trailing" constant="20" id="u0C-6K-oXL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artworkImageView" destination="soU-bW-OE7" id="Ub5-PJ-mzq"/>
-                                            <outlet property="label" destination="Ass-ej-gOy" id="Vli-a3-mNx"/>
+                                            <outlet property="descriptionLabel" destination="BUF-qj-Sjm" id="2ee-pK-XTZ"/>
+                                            <outlet property="titleLabel" destination="Ass-ej-gOy" id="ZMw-42-Rgi"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="JOU-rN-WzC" userLabel="Love + Radio Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
@@ -145,8 +175,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love + Radio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-n5-7D8">
-                                                    <rect key="frame" x="104" y="36" width="99" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="104" y="19" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -157,17 +187,27 @@
                                                         <constraint firstAttribute="width" constant="64" id="aez-bb-ePy"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love + Radio features in-depth, otherworldly-produced interviews with an eclectic range of subjects." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGQ-ML-gFr">
+                                                    <rect key="frame" x="104" y="44" width="251" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="FRE-n5-7D8" firstAttribute="centerY" secondItem="vee-di-gow" secondAttribute="centerY" id="8R3-Sy-K5L"/>
                                                 <constraint firstItem="tfE-wx-Kds" firstAttribute="leading" secondItem="vee-di-gow" secondAttribute="leading" constant="20" id="GsM-Sv-RDf"/>
+                                                <constraint firstItem="MGQ-ML-gFr" firstAttribute="leading" secondItem="tfE-wx-Kds" secondAttribute="trailing" constant="20" id="Nok-Rn-MPN"/>
                                                 <constraint firstItem="tfE-wx-Kds" firstAttribute="centerY" secondItem="vee-di-gow" secondAttribute="centerY" id="Qi4-1w-Wgr"/>
                                                 <constraint firstItem="FRE-n5-7D8" firstAttribute="leading" secondItem="tfE-wx-Kds" secondAttribute="trailing" constant="20" id="Shn-hM-Yrv"/>
+                                                <constraint firstItem="FRE-n5-7D8" firstAttribute="top" secondItem="tfE-wx-Kds" secondAttribute="top" constant="4" id="Vk0-0f-mz0"/>
+                                                <constraint firstItem="MGQ-ML-gFr" firstAttribute="top" secondItem="FRE-n5-7D8" secondAttribute="bottom" constant="4" id="a9N-Si-aBS"/>
+                                                <constraint firstAttribute="trailing" secondItem="MGQ-ML-gFr" secondAttribute="trailing" constant="20" id="hgC-Va-3cr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artworkImageView" destination="tfE-wx-Kds" id="tFn-Io-pak"/>
-                                            <outlet property="label" destination="FRE-n5-7D8" id="27s-fO-3U7"/>
+                                            <outlet property="descriptionLabel" destination="MGQ-ML-gFr" id="mfw-NR-ljW"/>
+                                            <outlet property="titleLabel" destination="FRE-n5-7D8" id="hSC-8u-vsX"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="tMt-YQ-lK0" userLabel="Nancy Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
@@ -178,8 +218,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-B4-Yf8">
-                                                    <rect key="frame" x="104" y="36" width="49" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="104" y="19" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -190,17 +230,27 @@
                                                         <constraint firstAttribute="width" secondItem="J5R-jQ-qvk" secondAttribute="height" multiplier="1:1" id="yiw-uc-CNA"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BFFs Kathy Tu and Tobin Low are super queer, super fun and ready to take over your podcast feed." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCc-qy-wjW">
+                                                    <rect key="frame" x="104" y="44" width="251" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="J5R-jQ-qvk" firstAttribute="centerY" secondItem="gd4-hl-f8w" secondAttribute="centerY" id="KEE-qA-UsI"/>
-                                                <constraint firstItem="Um5-B4-Yf8" firstAttribute="centerY" secondItem="gd4-hl-f8w" secondAttribute="centerY" id="TaV-w2-8sp"/>
                                                 <constraint firstItem="J5R-jQ-qvk" firstAttribute="leading" secondItem="gd4-hl-f8w" secondAttribute="leading" constant="20" id="UnN-tX-3bO"/>
                                                 <constraint firstItem="Um5-B4-Yf8" firstAttribute="leading" secondItem="J5R-jQ-qvk" secondAttribute="trailing" constant="20" id="XBq-Bq-qKf"/>
+                                                <constraint firstItem="Um5-B4-Yf8" firstAttribute="top" secondItem="J5R-jQ-qvk" secondAttribute="top" constant="4" id="i8i-hE-oqy"/>
+                                                <constraint firstAttribute="trailing" secondItem="gCc-qy-wjW" secondAttribute="trailing" constant="20" id="k6t-0O-U56"/>
+                                                <constraint firstItem="gCc-qy-wjW" firstAttribute="leading" secondItem="J5R-jQ-qvk" secondAttribute="trailing" constant="20" id="sa8-rz-KAd"/>
+                                                <constraint firstItem="gCc-qy-wjW" firstAttribute="top" secondItem="Um5-B4-Yf8" secondAttribute="bottom" constant="4" id="ty5-Lx-sEi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artworkImageView" destination="J5R-jQ-qvk" id="pGL-ex-afN"/>
-                                            <outlet property="label" destination="Um5-B4-Yf8" id="dmm-nZ-Xdc"/>
+                                            <outlet property="descriptionLabel" destination="gCc-qy-wjW" id="ezd-Yh-BnQ"/>
+                                            <outlet property="titleLabel" destination="Um5-B4-Yf8" id="Ssu-yz-CpV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -215,7 +265,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmV-Fp-Vyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="123"/>
+            <point key="canvasLocation" x="813.60000000000002" y="122.78860569715144"/>
         </scene>
     </scenes>
     <resources>

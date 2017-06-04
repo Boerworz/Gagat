@@ -12,21 +12,25 @@ class ArchiveTableCellView: UITableViewCell {
 
 	struct Style {
 		var backgroundColor: UIColor
-		var textColor: UIColor
+		var titleTextColor: UIColor
+		var descriptionTextColor: UIColor
 
 		static let light = Style(
 			backgroundColor: .white,
-			textColor: .black
+			titleTextColor: .black,
+			descriptionTextColor: UIColor(white: 0.4, alpha: 1.0)
 		)
 
 		static let dark = Style(
 			backgroundColor: UIColor(white: 0.2, alpha: 1.0),
-			textColor: .white
+			titleTextColor: .white,
+			descriptionTextColor: UIColor(white: 0.6, alpha: 1.0)
 		)
 	}
 
-    @IBOutlet fileprivate weak var label: UILabel?
+    @IBOutlet fileprivate weak var titleLabel: UILabel?
     @IBOutlet fileprivate weak var artworkImageView: UIImageView?
+	@IBOutlet fileprivate weak var descriptionLabel: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +39,8 @@ class ArchiveTableCellView: UITableViewCell {
 
     func apply(style: Style) {
         backgroundColor = style.backgroundColor
-        label?.textColor = style.textColor
+        titleLabel?.textColor = style.titleTextColor
+		descriptionLabel?.textColor = style.descriptionTextColor
     }
 
 }
