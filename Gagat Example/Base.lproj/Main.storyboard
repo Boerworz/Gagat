@@ -38,7 +38,7 @@
                         <sections>
                             <tableViewSection id="bKy-fT-GNx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="kZq-wj-Ib4" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="kZq-wj-Ib4" userLabel="If I Were You Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kZq-wj-Ib4" id="h7Z-Q2-PId">
@@ -71,7 +71,7 @@
                                             <outlet property="label" destination="6Zy-nj-Xvb" id="ZoX-Qj-WhS"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="yCO-4E-6Vh" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="yCO-4E-6Vh" userLabel="Radiolab Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="129" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yCO-4E-6Vh" id="Ub9-Jk-WYO">
@@ -104,7 +104,7 @@
                                             <outlet property="label" destination="XHi-vI-d55" id="FFL-W5-sXU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="uW0-iX-nRb" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="uW0-iX-nRb" userLabel="Appodden Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="223" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uW0-iX-nRb" id="07p-pv-ggJ">
@@ -137,7 +137,7 @@
                                             <outlet property="label" destination="Ass-ej-gOy" id="Vli-a3-mNx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="JOU-rN-WzC" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="JOU-rN-WzC" userLabel="Love + Radio Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="317" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JOU-rN-WzC" id="vee-di-gow">
@@ -170,7 +170,7 @@
                                             <outlet property="label" destination="FRE-n5-7D8" id="27s-fO-3U7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="tMt-YQ-lK0" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="tMt-YQ-lK0" userLabel="Nancy Cell" customClass="ArchiveTableCellView" customModule="Gagat_Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="411" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tMt-YQ-lK0" id="gd4-hl-f8w">
