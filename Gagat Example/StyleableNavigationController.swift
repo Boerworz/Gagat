@@ -45,8 +45,7 @@ extension StyleableNavigationController: GagatStyleable {
 	func toggleActiveStyle() {
 		useDarkMode = !useDarkMode
 
-		// Gagat only tells the window's root view controller to toggle its
-		// active style. It's up to us to get any child view controllers to
+		// It's up to us to get any child view controllers to
 		// toggle their active style. In this example application we've made
 		// the child view controller also conform to `GagatStyleable`, but
 		// this is not required by Gagat.

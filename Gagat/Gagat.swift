@@ -39,17 +39,7 @@ public struct Gagat {
 		}
 	}
 	
-	public static func configure(for window: UIWindow, using configuration: Configuration = .defaults) -> TransitionHandle? {
-		guard let rootViewController = window.rootViewController else {
-			print("Gagat Error: \(window) does not have a root view controller. Aborting.")
-			return nil
-		}
-
-		guard let styleableObject = rootViewController as? GagatStyleable else {
-			print("Gagat Error: The window's root view controller (\(rootViewController)) does not conform to `GagatStyleable`. Aborting.")
-			return nil
-		}
-
+	public static func configure(for window: UIWindow, with styleableObject: GagatStyleable, using configuration: Configuration = .defaults) -> TransitionHandle? {
 		let coordinator = TransitionCoordinator(targetView: window, configuration: configuration, styleableObject: styleableObject)
 		return TransitionHandle(coordinator: coordinator)
 	}
