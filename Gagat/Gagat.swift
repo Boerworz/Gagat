@@ -18,12 +18,8 @@ public struct Gagat {
 	public struct Configuration {
 		public let jellyFactor: Double
 
-		public init(jellyFactor: Double) {
+		public init(jellyFactor: Double = 1.0) {
 			self.jellyFactor = jellyFactor
-		}
-
-		public static var defaults: Configuration {
-			return Configuration(jellyFactor: 1.0)
 		}
 	}
 	
@@ -39,7 +35,7 @@ public struct Gagat {
 		}
 	}
 	
-	public static func configure(for window: UIWindow, with styleableObject: GagatStyleable, using configuration: Configuration = .defaults) -> TransitionHandle? {
+	public static func configure(for window: UIWindow, with styleableObject: GagatStyleable, using configuration: Configuration = Configuration()) -> TransitionHandle? {
 		let coordinator = TransitionCoordinator(targetView: window, styleableObject: styleableObject, configuration: configuration)
 		return TransitionHandle(coordinator: coordinator)
 	}
