@@ -30,7 +30,7 @@ class TransitionCoordinator: NSObject {
 
 	fileprivate var state = State.idle
 	
-	init(targetView: UIView, configuration: Gagat.Configuration, styleableObject: GagatStyleable) {
+	init(targetView: UIView, styleableObject: GagatStyleable, configuration: Gagat.Configuration) {
 		self.targetView = targetView
 		self.configuration = configuration
 		self.styleableObject = styleableObject

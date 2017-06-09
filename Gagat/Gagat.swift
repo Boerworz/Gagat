@@ -40,7 +40,7 @@ public struct Gagat {
 	}
 	
 	public static func configure(for window: UIWindow, with styleableObject: GagatStyleable, using configuration: Configuration = .defaults) -> TransitionHandle? {
-		let coordinator = TransitionCoordinator(targetView: window, configuration: configuration, styleableObject: styleableObject)
+		let coordinator = TransitionCoordinator(targetView: window, styleableObject: styleableObject, configuration: configuration)
 		return TransitionHandle(coordinator: coordinator)
 	}
 }
