@@ -32,41 +32,23 @@ class ArchiveTableViewController: UITableViewController, UIGestureRecognizerDele
             return
         }
 
-        archiveCell.apply(style: currentStyle.tableViewStyle.cellStyle)
+        archiveCell.apply(style: currentStyle.cellStyle)
     }
 
     // MARK: - Applying styles
 
 	private struct Style {
-		let navigationBarStyle: UIBarStyle
-		let statusBarStyle: UIStatusBarStyle
-		let tableViewStyle: TableViewStyle
-
-		static let dark = Style(
-			navigationBarStyle: .black,
-			statusBarStyle: .lightContent,
-			tableViewStyle: .dark
-		)
-
-		static let light = Style(
-			navigationBarStyle: .default,
-			statusBarStyle: .default,
-			tableViewStyle: .light
-		)
-	}
-
-	private struct TableViewStyle {
 		let backgroundColor: UIColor
 		let separatorColor: UIColor?
 		let cellStyle: ArchiveTableCellView.Style
 
-		static let dark = TableViewStyle(
+		static let dark = Style(
 			backgroundColor: UIColor(white: 0.15, alpha: 1.0),
 			separatorColor: UIColor(white: 0.35, alpha: 1.0),
 			cellStyle: .dark
 		)
 
-		static let light = TableViewStyle(
+		static let light = Style(
 			backgroundColor: .groupTableViewBackground,
 			separatorColor: UIColor(white: 0.81, alpha: 1.0),
 			cellStyle: .light
@@ -82,12 +64,9 @@ class ArchiveTableViewController: UITableViewController, UIGestureRecognizerDele
     }
 
     private func apply(_ style: Style) {
-        navigationController?.navigationBar.barStyle = style.navigationBarStyle
-        UIApplication.shared.statusBarStyle = style.statusBarStyle
-
-        tableView.backgroundColor = style.tableViewStyle.backgroundColor
-        tableView.separatorColor = style.tableViewStyle.separatorColor
-        apply(style.tableViewStyle.cellStyle, toCells: tableView.visibleCells)
+		tableView.backgroundColor = style.backgroundColor
+        tableView.separatorColor = style.separatorColor
+        apply(style.cellStyle, toCells: tableView.visibleCells)
     }
 
     private func apply(_ cellStyle: ArchiveTableCellView.Style, toCells cells: [UITableViewCell]) {
