@@ -85,7 +85,7 @@ public struct Gagat {
 	/// - parameter configuration: The configuration to use for the transition.
 	///
 	/// - returns: A new instance of `TransitionHandle`.
-	public static func configure(for window: UIWindow, with styleableObject: GagatStyleable, using configuration: Configuration = Configuration()) -> TransitionHandle? {
+	public static func configure(for window: UIWindow, with styleableObject: GagatStyleable, using configuration: Configuration = Configuration()) -> TransitionHandle {
 		let coordinator = TransitionCoordinator(targetView: window, styleableObject: styleableObject, configuration: configuration)
 		return TransitionHandle(coordinator: coordinator)
 	}
