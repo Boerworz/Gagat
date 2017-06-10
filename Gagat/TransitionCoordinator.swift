@@ -17,10 +17,8 @@ class TransitionCoordinator: NSObject {
 		case transitioning
 	}
 
-	/// This represents the view (or window) that the transition should
-    /// occur in.
-	/// Note: This is not necessarily the same view that the gesture
-	/// recognizer is installed in.
+	/// The view (or window) that the transition should occur in, and
+	/// which the pan gesture recognizer is installed in.
 	fileprivate let targetView: UIView
 	
 	fileprivate let configuration: Gagat.Configuration
@@ -129,6 +127,7 @@ class TransitionCoordinator: NSObject {
 			// We wan't to prevent the user from moving the mask layer out the
 			// top of the targetView, since doing so would show the new style at
 			// the bottom of the targetView instead.
+			//
 			// By resetting the translation we make sure there's no visual
 			// delay between when the user tries to pan upwards and when they
 			// start panning downwards again.
@@ -137,10 +136,11 @@ class TransitionCoordinator: NSObject {
 		} else {
 			// Simply move the mask layer as much as the user has panned.
 			// Note that if we had used the _location_ of the pan recognizer
-			// instead of the translation, the top of the mask layer would
+			// instead of the _translation_, the top of the mask layer would
 			// follow the fingers exactly. Using the translation results in a
 			// better user experience since the location of the mask layer is
-			// instead relative to the distance moved.
+			// instead relative to the distance moved, just like when moving a
+			// piece of paper with our fingertips.
 			snapshotMaskLayer?.frame.origin.y = verticalTranslation
 		}
 		
@@ -214,7 +214,7 @@ class TransitionCoordinator: NSObject {
 
 		state = .transitioning
 		
-		// When cancelling the transition we simply move the mask layer to it's original
+		// When cancelling the transition we simply animate the mask layer to its original
 		// location (which means that the entire previous style snapshot is shown), then
 		// reset the style to the previous style and remove the snapshot.
 		animate(snapshotMaskLayer, to: .zero, withVelocity: velocity) {
