@@ -4,7 +4,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Boerworz/Gagat/master/LICENSE)
 
-Gagat is a small Swift library that makes it easy to add a delightful, interactive way to switch between different themes in your iOS application using a two-finger pan. The library was designed primarily for applications that support a "dark mode", and is heavily inspired by the Night Mode transition in [Castro 2](http://supertop.co/castro)
+Gagat is a small Swift library that makes it easy to add a delightful, interactive way to switch between two different themes in your iOS application using a two-finger pan. The library was designed primarily for applications that support a "dark mode", and is heavily inspired by the Night Mode transition in [Castro 2](http://supertop.co/castro)
 
 ![Gagat Example](gagat_example.gif)
 
