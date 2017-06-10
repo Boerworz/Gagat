@@ -22,3 +22,7 @@ xcuserdata
 *~.nib
 *.swp
 *~
+
+# Carthage
+Carthage
+*.framework.zip
