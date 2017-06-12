@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9355030F1EF2F4CA00FD428F /* GagatObjectiveC.h in Headers */ = {isa = PBXBuildFile; fileRef = 9355030D1EF2F4CA00FD428F /* GagatObjectiveC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		935503141EF2F4E900FD428F /* Gagat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935503131EF2F4E900FD428F /* Gagat.swift */; };
+		935503171EF2F4F800FD428F /* Gagat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9390063E1EE2038900BF6787 /* Gagat.framework */; };
 		9390062D1EE2024700BF6787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939006211EE2024700BF6787 /* AppDelegate.swift */; };
 		9390062E1EE2024700BF6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939006221EE2024700BF6787 /* Assets.xcassets */; };
 		939006361EE2029E00BF6787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939006231EE2024700BF6787 /* LaunchScreen.storyboard */; };
@@ -24,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		935503151EF2F4F300FD428F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9386EDD21E577236009079B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9390063D1EE2038900BF6787;
+			remoteInfo = Gagat;
+		};
 		939006431EE2038900BF6787 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9386EDD21E577236009079B6 /* Project object */;
@@ -48,6 +58,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9355030B1EF2F4CA00FD428F /* GagatObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GagatObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9355030D1EF2F4CA00FD428F /* GagatObjectiveC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GagatObjectiveC.h; sourceTree = "<group>"; };
+		9355030E1EF2F4CA00FD428F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935503131EF2F4E900FD428F /* Gagat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gagat.swift; sourceTree = "<group>"; };
 		9386EDDA1E577236009079B6 /* Gagat Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gagat Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		939006211EE2024700BF6787 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		939006221EE2024700BF6787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +81,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		935503071EF2F4CA00FD428F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935503171EF2F4F800FD428F /* Gagat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9386EDD71E577236009079B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,11 +107,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9355030C1EF2F4CA00FD428F /* GagatObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				935503131EF2F4E900FD428F /* Gagat.swift */,
+				9355030D1EF2F4CA00FD428F /* GagatObjectiveC.h */,
+				9355030E1EF2F4CA00FD428F /* Info.plist */,
+			);
+			path = GagatObjectiveC;
+			sourceTree = "<group>";
+		};
 		9386EDD11E577236009079B6 = {
 			isa = PBXGroup;
 			children = (
 				9390061F1EE2024700BF6787 /* Gagat Example */,
 				9390063F1EE2038900BF6787 /* Gagat */,
+				9355030C1EF2F4CA00FD428F /* GagatObjectiveC */,
 				9386EDDB1E577236009079B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +132,7 @@
 			children = (
 				9386EDDA1E577236009079B6 /* Gagat Example.app */,
 				9390063E1EE2038900BF6787 /* Gagat.framework */,
+				9355030B1EF2F4CA00FD428F /* GagatObjectiveC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +168,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		935503081EF2F4CA00FD428F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9355030F1EF2F4CA00FD428F /* GagatObjectiveC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9390063B1EE2038900BF6787 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +187,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9355030A1EF2F4CA00FD428F /* GagatObjectiveC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 935503121EF2F4CA00FD428F /* Build configuration list for PBXNativeTarget "GagatObjectiveC" */;
+			buildPhases = (
+				935503061EF2F4CA00FD428F /* Sources */,
+				935503071EF2F4CA00FD428F /* Frameworks */,
+				935503081EF2F4CA00FD428F /* Headers */,
+				935503091EF2F4CA00FD428F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				935503161EF2F4F300FD428F /* PBXTargetDependency */,
+			);
+			name = GagatObjectiveC;
+			productName = GagatObjectiveC;
+			productReference = 9355030B1EF2F4CA00FD428F /* GagatObjectiveC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9386EDD91E577236009079B6 /* Gagat Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9386EDEC1E577236009079B6 /* Build configuration list for PBXNativeTarget "Gagat Example" */;
@@ -192,6 +253,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Cocoabeans Software";
 				TargetAttributes = {
+					9355030A1EF2F4CA00FD428F = {
+						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
 					9386EDD91E577236009079B6 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
@@ -218,11 +284,19 @@
 			targets = (
 				9386EDD91E577236009079B6 /* Gagat Example */,
 				9390063D1EE2038900BF6787 /* Gagat */,
+				9355030A1EF2F4CA00FD428F /* GagatObjectiveC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		935503091EF2F4CA00FD428F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9386EDD81E577236009079B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +317,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		935503061EF2F4CA00FD428F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935503141EF2F4E900FD428F /* Gagat.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9386EDD61E577236009079B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +350,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		935503161EF2F4F300FD428F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9390063D1EE2038900BF6787 /* Gagat */;
+			targetProxy = 935503151EF2F4F300FD428F /* PBXContainerItemProxy */;
+		};
 		939006441EE2038900BF6787 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9390063D1EE2038900BF6787 /* Gagat */;
@@ -295,6 +382,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		935503101EF2F4CA00FD428F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GagatObjectiveC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.GagatObjectiveC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		935503111EF2F4CA00FD428F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GagatObjectiveC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.cocoabeans.GagatObjectiveC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9386EDEA1E577236009079B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -472,6 +608,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		935503121EF2F4CA00FD428F /* Build configuration list for PBXNativeTarget "GagatObjectiveC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				935503101EF2F4CA00FD428F /* Debug */,
+				935503111EF2F4CA00FD428F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9386EDD51E577236009079B6 /* Build configuration list for PBXProject "Gagat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
