@@ -13,7 +13,7 @@ import Gagat
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	var transitionHandle: Gagat.TransitionHandle!
+	private var transitionHandle: Gagat.TransitionHandle!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Configure Gagat for the applications only window using a jelly factor that is
@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		//
 		// Note: Make sure you keep a reference to the value returned from `Gagat.configure(for:using:)`.
 		// If this object is deallocated then the Gagat transition will no longer work.
-		// You also need the returned value if you have any scroll views in your application that might
-		// interfere with Gagat's pan gesture. See `ArchiveTableViewController.viewDidLoad()`.
 		let configuration = Gagat.Configuration(jellyFactor: 1.5)
 		let styleableNavigationController = window!.rootViewController as! StyleableNavigationController
 		transitionHandle = Gagat.configure(for: window!, with: styleableNavigationController, using: configuration)

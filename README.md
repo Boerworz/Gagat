@@ -25,7 +25,7 @@ github "Boerworz/Gagat" ~> 1.0
 If you prefer not to use a dependency managment system you can copy the swift files from the [Gagat](Gagat) directory into your project.
 
 ## Usage
-To support Gagat in your iOS application there's two, probably three, things you need to do (apart from `import`ing Gagat):
+To support Gagat in your iOS application there's two things you need to do (apart from `import`ing Gagat):
 
 #### 1. Conform to `GagatStyleable`
 In order for Gagat to be able to trigger the style change in your application you must provide it with an object that conforms to `GagatStyleable`. This object could be your root view controller, a specialized `StyleManager` kind of object, your app delegate, or any other object that fits your architecture.
@@ -37,7 +37,7 @@ This is typically done in your implementation of `application(_:didFinishLaunchi
 
 If you want to customize properties of the transition, such as the jelly factor, pass an instance of `Gagat.Configuration` as the last argument to `Gagat.configure(for:with:using:)`, or omit it if you want to use the defaults.
 
-**Important:** In order for Gagat to work as expected you _must_ keep a reference to the value returned by `Gagat.configure(for:with:using:)` for the entire lifetime of your application (or until you want to disable Gagat). You will also need the returned value in step 3.
+**Important:** In order for Gagat to work as expected you _must_ keep a reference to the value returned by `Gagat.configure(for:with:using:)` for the entire lifetime of your application (or until you want to disable Gagat).
 
 ```swift
 // AppDelegate.swift
@@ -53,18 +53,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 	return true
 }
 ```
-
-#### 3. Configure your scroll views' pan gesture recognizers
-
-If your application contains scroll views (this includes table views and collection views), there's one final thing that you need to do. You need to tell the scroll views' pan gesture recognizers to wait until Gagat's pan gesture recognizer has failed. This is done with the `UIGestureRecognizer.require(toFail:)` method:
-
-```swift
-scrollView.panGestureRecognizer.require(toFail: gagatTransitionHandle.panGestureRecognizer)
-```
-
-Where `scrollView` is your scroll view (or table view, or collection view) and `gagatTransitionHandle` is the object that was returned by `Gagat.configure(for:with:using:)`.
-
-If you skip this step the scroll views will prevent any two-finger pans on the scroll views from reaching Gagat. This means that your users will be able to trigger the style transition *only* when panning outside of your scroll views, which is probably undesirable.
 
 #### You're done!
 

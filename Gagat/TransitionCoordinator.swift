@@ -271,6 +271,11 @@ extension TransitionCoordinator: UIGestureRecognizerDelegate {
 		let panningDirection = direction(for: panningAngle)
 		return panningDirection == .down
 	}
+
+	func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+		// This prevents other pan gesture recognizerns (such as the one in scroll views) from interfering with the Gagat gesture.
+		return otherGestureRecognizer is UIPanGestureRecognizer
+	}
 	
 	private func direction(for angle: Degrees) -> Direction {
 		switch angle {

@@ -16,13 +16,6 @@ class ArchiveTableViewController: UITableViewController, UIGestureRecognizerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         apply(currentStyle)
-
-		// If you have a scroll view/table view/collection view in your app, you need to tell
-		// its pan gesture recognizer to wait for Gagat's pan gesture recognizer. If this
-		// isn't done then the scroll view will prevent the two-finger pan events from reaching
-		// Gagat.
-		let appDelegate = UIApplication.shared.delegate as! AppDelegate
-		tableView.panGestureRecognizer.require(toFail: appDelegate.transitionHandle.panGestureRecognizer)
     }
 
     // MARK: - UITableViewDelegate methods
