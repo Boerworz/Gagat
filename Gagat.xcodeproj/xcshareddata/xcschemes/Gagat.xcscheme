@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Gagat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9355030A1EF2F4CA00FD428F"
+               BuildableName = "GagatObjectiveC.framework"
+               BlueprintName = "GagatObjectiveC"
+               ReferencedContainer = "container:Gagat.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -29,6 +43,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9390063D1EE2038900BF6787"
+            BuildableName = "Gagat.framework"
+            BlueprintName = "Gagat"
+            ReferencedContainer = "container:Gagat.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
