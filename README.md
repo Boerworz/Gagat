@@ -1,4 +1,6 @@
-# Gagat
+![Gagat Logo](gagat_logo.png)
+
+# What is Gagat?
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)]()
 [![Swift 3](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
