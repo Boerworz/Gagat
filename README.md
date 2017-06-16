@@ -70,6 +70,9 @@ Gagat includes an app that showcases what this library has to offer. To run the 
 * [Love + Radio](http://loveandradio.org)
 * [Nancy](https://www.wnyc.org/shows/nancy)
 
+## Credits
+The Gagat logo was created by [Johan Rothoff Andersson](http://www.johanrothoff.com).
+
 ## License
 
 The MIT License (MIT)
