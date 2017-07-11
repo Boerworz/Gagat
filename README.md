@@ -3,10 +3,11 @@
 # What is Gagat?
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)]()
 [![Swift 3](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
+[![Objective-C compatible](https://img.shields.io/badge/Objective--C-compatible-48B3E9.svg)]()
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Boerworz/Gagat/master/LICENSE)
 
-Gagat is a small Swift library that makes it easy to add a delightful, interactive way to switch between two different themes in your iOS application using a two-finger pan. The library was designed primarily for applications that support a "dark mode", and is heavily inspired by the Night Mode transition in [Castro 2](http://supertop.co/castro)
+Gagat is a small Swift library that makes it easy to add a delightful, interactive way to switch between two different themes in your iOS application using a two-finger pan. The library was designed primarily for applications that support a "dark mode", and is heavily inspired by the Night Mode transition in [Castro 2](http://supertop.co/castro).
 
 ![Gagat Example](gagat_example.gif)
 
@@ -14,17 +15,11 @@ Gagat is a small Swift library that makes it easy to add a delightful, interacti
 Gagat is **not** a library for styling your iOS applications. You must write all the styling logic yourself without any help from Gagat, and then call your styling code from your implementation of `GagatStyleable.toggleActiveStyle()`. If you are unsure of how to implement the styling, the Example app included with Gagat showcases one way to support different themes in an application by using [configuration models](http://www.jessesquires.com/enums-as-configs/).
 
 ## Requirements
-Gagat is written in Swift 3.1 and requires iOS 10.0. It cannot be used from applications written in Objective-C.
+Gagat is written in Swift 3.1 and requires iOS 10.0. It can be used from both Swift and Objective-C clients.
 
 ## Installation
 
-The recommended way to install Gagat is using [Carthage](https://github.com/Carthage/Carthage). Simply add the following line to your `Cartfile`:
-
-```
-github "Boerworz/Gagat" ~> 1.0
-```
-
-If you prefer not to use a dependency managment system you can copy the swift files from the [Gagat](Gagat) directory into your project.
+The recommended way to install Gagat is using [Carthage](https://github.com/Carthage/Carthage). Simply add `github "Boerworz/Gagat" ~> 1.0` to your `Cartfile`, run a suitable Carthage command (such as `bootstrap`) and then add the framework(s) to your project. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`.
 
 ## Usage
 To support Gagat in your iOS application there's two things you need to do (apart from `import`ing Gagat):
@@ -59,6 +54,21 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 #### You're done!
 
 You should now be able to switch between your different styles by using a two-finger downwards pan from anywhere in your application.
+
+### About Objective-C interoperability
+
+Using Gagat from Objective-C is fundamentally the same as using it from Swift, but there are some minor differences.
+
+First, you need to make sure you've added both the `GagatObjectiveC.framework` _and_ the `Gagat.framework` to your project, and that you're importing `GagatObjectiveC` (i.e. `@import GagatObjectiveC` or `#import <GagatObjectiveC/GagatObjectiveC.h>`).
+
+Second, the type names are slightly different:
+
+| Swift Type               | Objective-C Type      |
+| ------------------------ | --------------------- |
+| `Gagat`                  | `GGTManager`          |
+| `GagatStyleable`         | `GGTStyleable`        |
+| `Gagat.Configuration`    | `GGTConfiguration`    |
+| `Gagat.TransitionHandle` | `GGTTransitionHandle` |
 
 ## Running the Example app
 Gagat includes an app that showcases what this library has to offer. To run the Example app, open [Gagat.xcodeproj](Gagat.xcodeproj) and run the _Gagat Example_ scheme. If you want to run the Example app on a device (you do!) then you'll need to select a team in the target settings for the _Gagat Example_ target.
