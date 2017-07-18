@@ -70,6 +70,13 @@ Gagat includes an app that showcases what this library has to offer. To run the 
 * [Love + Radio](http://loveandradio.org)
 * [Nancy](https://www.wnyc.org/shows/nancy)
 
+## Apps that use Gagat
+If you're on your iPhone or iPad and want to try Gagat, download one of the following apps. They all use Gagat!
+
+* [Push Me](https://pushme.jagcesar.se)
+
+_Want your app to be listed here? Please create a pull request that adds it to the end of the list._
+
 ## Credits
 The Gagat logo was created by [Johan Rothoff Andersson](http://www.johanrothoff.com).
 
