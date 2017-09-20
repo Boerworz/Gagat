@@ -74,6 +74,7 @@ Gagat includes an app that showcases what this library has to offer. To run the 
 If you're on your iPhone or iPad and want to try Gagat, download one of the following apps. They all use Gagat!
 
 * [Push Me](https://pushme.jagcesar.se)
+* [Bitbook](https://bitbookapp.com)
 
 _Want your app to be listed here? Please create a pull request that adds it to the end of the list._
 
