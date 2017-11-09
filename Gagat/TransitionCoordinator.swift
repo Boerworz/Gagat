@@ -85,6 +85,10 @@ class TransitionCoordinator: NSObject {
 	private var snapshotMaskLayer: CAShapeLayer?
 	
 	private func beginInteractiveStyleTransition(withPanRecognizer panRecognizer: PessimisticPanGestureRecognizer) {
+
+		// Inform our object that we're about to start a transition.
+		styleableObject.styleTransitionWillBegin()
+
 		// We snapshot the targetView before applying the new style, and make sure
 		// it's positioned on top of all the other content.
 		previousStyleTargetViewSnapshot = targetView.snapshotView(afterScreenUpdates: false)
@@ -205,6 +209,7 @@ class TransitionCoordinator: NSObject {
 		styleableObject.toggleActiveStyle()
 		cleanupAfterInteractiveStyleTransition()
 		state = .idle
+		styleableObject.styleTransitionDidEnd()
 	}
 	
 	private func cancelInteractiveStyleTransition(withVelocity velocity: CGPoint) {
@@ -221,6 +226,7 @@ class TransitionCoordinator: NSObject {
 			self.styleableObject.toggleActiveStyle()
 			self.cleanupAfterInteractiveStyleTransition()
 			self.state = .idle
+			self.styleableObject.styleTransitionDidEnd()
 		}
 	}
 	
@@ -240,6 +246,7 @@ class TransitionCoordinator: NSObject {
 		animate(snapshotMaskLayer, to: targetLocation, withVelocity: velocity) {
 			self.cleanupAfterInteractiveStyleTransition()
 			self.state = .idle
+			self.styleableObject.styleTransitionDidEnd()
 		}
 	}
 	

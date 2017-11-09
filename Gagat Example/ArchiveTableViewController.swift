@@ -77,6 +77,14 @@ class ArchiveTableViewController: UITableViewController, UIGestureRecognizerDele
 
 extension ArchiveTableViewController: GagatStyleable {
 
+	func styleTransitionWillBegin() {
+		// Do any work you might need to do before the transition snapshot is taken.
+	}
+
+	func styleTransitionDidEnd() {
+		// Do any work you might need to do once the transition has completed.
+	}
+
 	func toggleActiveStyle() {
 		useDarkMode = !useDarkMode
 	}

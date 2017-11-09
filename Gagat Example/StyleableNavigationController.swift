@@ -42,6 +42,21 @@ class StyleableNavigationController: UINavigationController {
 }
 
 extension StyleableNavigationController: GagatStyleable {
+
+	func styleTransitionWillBegin() {
+		// Do any work you might need to do before the transition snapshot is taken.
+		if let styleableChildViewController = topViewController as? GagatStyleable {
+			styleableChildViewController.styleTransitionWillBegin()
+		}
+	}
+
+	func styleTransitionDidEnd() {
+		// Do any work you might need to do once the transition has completed.
+		if let styleableChildViewController = topViewController as? GagatStyleable {
+			styleableChildViewController.styleTransitionDidEnd()
+		}
+	}
+
 	func toggleActiveStyle() {
 		useDarkMode = !useDarkMode
 
