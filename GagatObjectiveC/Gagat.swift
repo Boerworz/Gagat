@@ -23,7 +23,13 @@ import Gagat
 	/// This method is called by Gagat at the start of a transition
 	/// and at the end of a _cancelled_ transition (to revert to the
 	/// previous style).
-	func toggleActiveStyle()
+	@objc func toggleActiveStyle()
+
+	/// Called when the style transition is about to begin. `toggleActiveStyle()` will be called just after this.
+	@objc optional func styleTransitionWillBegin()
+
+	/// Called when the style transition ended.
+	@objc optional func styleTransitionDidEnd()
 }
 
 /// The `GGTConfiguration` class allows clients to configure certain
@@ -115,5 +121,17 @@ private struct GagatStyleableSwiftToObjCProxy: GagatStyleable {
 
 	func toggleActiveStyle() {
 		target.toggleActiveStyle()
+	}
+
+	func styleTransitionWillBegin() {
+		if let targetImplementation = target.styleTransitionWillBegin {
+			targetImplementation()
+		}
+	}
+
+	func styleTransitionDidEnd() {
+		if let targetImplementation = target.styleTransitionDidEnd {
+			targetImplementation()
+		}
 	}
 }
