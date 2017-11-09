@@ -126,6 +126,7 @@
 				9386EDDB1E577236009079B6 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		9386EDDB1E577236009079B6 /* Products */ = {
 			isa = PBXGroup;
