@@ -25,6 +25,14 @@ public protocol GagatStyleable {
 	func styleTransitionDidEnd()
 }
 
+/// Since styleTransitionWillBegin() and styleTransitionDidEnd() aren't considered as required to implement
+/// the core functionality of the GagatStyleable protocol, this extension provides default (empty) implementations
+/// of those functions. This makes implementing them in your GagatStyleable object optional.
+public extension GagatStyleable {
+	func styleTransitionWillBegin() {}
+	func styleTransitionDidEnd() {}
+}
+
 public struct Gagat {
 
 	/// The `Configuration` struct allows clients to configure certain
