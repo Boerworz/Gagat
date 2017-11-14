@@ -73,6 +73,7 @@ Gagat includes an app that showcases what this library has to offer. To run the 
 ## Apps that use Gagat
 If you're on your iPhone or iPad and want to try Gagat, download one of the following apps. They all use Gagat!
 
+* [Cascable](https://cascable.se)
 * [Push Me](https://pushme.jagcesar.se)
 * [Bitbook](https://bitbookapp.com)
 
