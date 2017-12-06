@@ -19,16 +19,15 @@ Gagat is written in Swift 3.1 and requires iOS 10.0. It can be used from both Sw
 
 ## Installation
 
-You can either install Gagat using [Carthage] (recommended) or by using the pre-built binaries available from the [Releases](https://github.com/Boerworz/Gagat/releases) page.
+You can either install Gagat using [Carthage] \(recommended) or by adding Gagat as a subproject.
 
 #### Carthage
 
 The recommended way to install Gagat is using [Carthage]. Simply add `github "Boerworz/Gagat" ~> 1.0` to your `Cartfile`, run a suitable Carthage command (such as `bootstrap`) and then add the framework(s) to your project. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`.
 
-#### Using pre-built binaries
+#### Adding Gagat as a subproject
 
-If you don't use [Carthage] to manage your dependencies then installing Gagat through the pre-built binaries is probably the easiest way. To download the pre-built binaries, head over to the [Releases](https://github.com/Boerworz/Gagat/releases) page and grab the the zip files from the latest release. If you're using Gagat from Swift you only need `Gagat-x.y.z.framework.zip`, but for Objective-C clients you need both `Gagat-x.y.z.framework.zip` and `GagatObjectiveC-x.y.z.framework`.
-Once you've downloaded and unzipped the files you'll find the framework bundles in the `Carthage/Build/iOS/` directory. Simply add the `.framework`s to your project like any other framework. If you're unsure of how to add a framework to your project, please refer to [Apple's Technical Note on the topic.](https://developer.apple.com/library/content/technotes/tn2435/_index.html#//apple_ref/doc/uid/DTS40017543-CH1-EMBED_IN_APP_SECTION).
+If you don't use [Carthage] to manage your dependencies then adding Gagat as a subproject is the easiest way to integrate Gagat. To do this simply download an [archive of the master branch](https://github.com/Boerworz/Gagat/archive/master.zip) and copy or move the entire directory to your project directory. When that's done, drag `Gagat.xcodeproj` from the Finder into your project organizer in Xcode. You should now be able to add the Gagat framework(s) as Embedded Binaries to your target. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`. If you're unsure of how to do add frameworks to your project, please refer to [Apple's Technical Note on the topic](https://developer.apple.com/library/content/technotes/tn2435/_index.html#//apple_ref/doc/uid/DTS40017543-CH1-EMBED_IN_APP_SECTION).
 
 ## Usage
 To support Gagat in your iOS application there's two things you need to do (apart from `import`ing Gagat):
