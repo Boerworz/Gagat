@@ -23,7 +23,7 @@ You can either install Gagat using [Carthage] \(recommended) or by adding Gagat 
 
 #### Carthage
 
-The recommended way to install Gagat is using [Carthage]. Simply add `github "Boerworz/Gagat" ~> 1.0` to your `Cartfile`, run a suitable Carthage command (such as `bootstrap`) and then add the framework(s) to your project. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`.
+The recommended way to install Gagat is using [Carthage]. Simply add `github "Boerworz/Gagat" ~> 1.1` to your `Cartfile`, run a suitable Carthage command (such as `bootstrap`) and then add the framework(s) to your project. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`.
 
 #### Adding Gagat as a subproject
 
