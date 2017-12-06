@@ -19,7 +19,16 @@ Gagat is written in Swift 3.1 and requires iOS 10.0. It can be used from both Sw
 
 ## Installation
 
-The recommended way to install Gagat is using [Carthage](https://github.com/Carthage/Carthage). Simply add `github "Boerworz/Gagat" ~> 1.0` to your `Cartfile`, run a suitable Carthage command (such as `bootstrap`) and then add the framework(s) to your project. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`.
+You can either install Gagat using [Carthage] (recommended) or by using the pre-built binaries available from the [Releases](https://github.com/Boerworz/Gagat/releases) page.
+
+#### Carthage
+
+The recommended way to install Gagat is using [Carthage]. Simply add `github "Boerworz/Gagat" ~> 1.0` to your `Cartfile`, run a suitable Carthage command (such as `bootstrap`) and then add the framework(s) to your project. If you're using Gagat from Swift you only need `Gagat.framework`, but for Objective-C clients you need both `Gagat.framework` and `GagatObjectiveC.framework`.
+
+#### Using pre-built binaries
+
+If you don't use [Carthage] to manage your dependencies then installing Gagat through the pre-built binaries is probably the easiest way. To download the pre-built binaries, head over to the [Releases](https://github.com/Boerworz/Gagat/releases) page and grab the the zip files from the latest release. If you're using Gagat from Swift you only need `Gagat-x.y.z.framework.zip`, but for Objective-C clients you need both `Gagat-x.y.z.framework.zip` and `GagatObjectiveC-x.y.z.framework`.
+Once you've downloaded and unzipped the files you'll find the framework bundles in the `Carthage/Build/iOS/` directory. Simply add the `.framework`s to your project like any other framework. If you're unsure of how to add a framework to your project, please refer to [Apple's Technical Note on the topic.](https://developer.apple.com/library/content/technotes/tn2435/_index.html#//apple_ref/doc/uid/DTS40017543-CH1-EMBED_IN_APP_SECTION).
 
 ## Usage
 To support Gagat in your iOS application there's two things you need to do (apart from `import`ing Gagat):
@@ -103,3 +112,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[Carthage]: https://github.com/Carthage/Carthage
