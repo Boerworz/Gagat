@@ -16,12 +16,18 @@ public protocol GagatStyleable {
 	/// This method is called by Gagat at the start of a transition
 	/// and at the end of a _cancelled_ transition (to revert to the
 	/// previous style).
+	///
+	/// This method is required.
 	func toggleActiveStyle()
 
 	/// Called when the style transition is about to begin. `toggleActiveStyle()` will be called just after this.
+	///
+	/// This method is optional.
 	func styleTransitionWillBegin()
 
 	/// Called when the style transition ended.
+	///
+	/// This method is optional.
 	func styleTransitionDidEnd()
 }
 
