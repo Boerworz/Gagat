@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	private var transitionHandle: Gagat.TransitionHandle!
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Configure Gagat for the applications only window using a jelly factor that is
 		// slightly larger than the default factor of 1.0. We'll use the root view controller
 		// as the styleable object, but you can use any object that conforms to `GagatStyleable`.
