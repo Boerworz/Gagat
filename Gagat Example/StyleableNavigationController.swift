@@ -11,34 +11,11 @@ import Gagat
 
 class StyleableNavigationController: UINavigationController {
 
-	private struct Style {
-		var navigationBarStyle: UIBarStyle
-		var statusBarStyle: UIStatusBarStyle
-
-		static let dark = Style(
-			navigationBarStyle: .black,
-			statusBarStyle: .lightContent
-		)
-
-		static let light = Style(
-			navigationBarStyle: .default,
-			statusBarStyle: .default
-		)
-	}
-
-	private var currentStyle: Style {
-		return useDarkMode ? .dark : .light
-	}
-
 	fileprivate var useDarkMode = false {
-		didSet { apply(currentStyle) }
+		didSet {
+			navigationBar.barStyle = useDarkMode ? .black : .default
+		}
 	}
-
-	private func apply(_ style: Style) {
-		navigationBar.barStyle = style.navigationBarStyle
-		UIApplication.shared.statusBarStyle = style.statusBarStyle
-	}
-
 }
 
 extension StyleableNavigationController: GagatStyleable {
