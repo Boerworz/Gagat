@@ -43,9 +43,9 @@ public class GGTConfiguration: NSObject {
 	/// Specify a factor of 0 to entirely disable the deformation.
 	///
 	/// Defaults to 1.0.
-	public let jellyFactor: Double
+	@objc public let jellyFactor: Double
 
-	public init(jellyFactor: Double = 1.0) {
+	@objc public init(jellyFactor: Double = 1.0) {
 		self.jellyFactor = jellyFactor
 	}
 
@@ -73,7 +73,7 @@ public class GGTTransitionHandle: NSObject {
 	///
 	/// - important: You *must not* change the gesture recognizer's delegate
 	///              or remove targets not added by the client.
-	public var panGestureRecognizer: UIPanGestureRecognizer {
+	@objc public var panGestureRecognizer: UIPanGestureRecognizer {
 		return wrappedHandle.panGestureRecognizer
 	}
 }
@@ -102,7 +102,7 @@ public class GGTManager: NSObject {
 	/// - parameter configuration: The configuration to use for the transition.
 	///
 	/// - returns: A new instance of `GGTTransitionHandle`.
-	public class func configure(forWindow window: UIWindow, withStyleableObject styleableObject: GGTStyleable, usingConfiguration configuration: GGTConfiguration = GGTConfiguration()) -> GGTTransitionHandle {
+	@objc public class func configure(forWindow window: UIWindow, withStyleableObject styleableObject: GGTStyleable, usingConfiguration configuration: GGTConfiguration = GGTConfiguration()) -> GGTTransitionHandle {
 		let styleableObjectProxy = GagatStyleableSwiftToObjCProxy(target: styleableObject)
 		let handle = Gagat.configure(for: window, with: styleableObjectProxy, using: configuration.toSwiftRepresentation)
 		return GGTTransitionHandle(byWrapping: handle)

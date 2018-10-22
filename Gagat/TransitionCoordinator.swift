@@ -54,7 +54,7 @@ class TransitionCoordinator: NSObject {
 		self.panGestureRecognizer = panGestureRecognizer
 	}
 	
-	func panRecognizerDidChange(_ panRecognizer: PessimisticPanGestureRecognizer) {
+	@objc func panRecognizerDidChange(_ panRecognizer: PessimisticPanGestureRecognizer) {
 		switch panRecognizer.state {
 		case .began:
 			beginInteractiveStyleTransition(withPanRecognizer: panRecognizer)
@@ -93,7 +93,7 @@ class TransitionCoordinator: NSObject {
 		// it's positioned on top of all the other content.
 		previousStyleTargetViewSnapshot = targetView.snapshotView(afterScreenUpdates: false)
 		targetView.addSubview(previousStyleTargetViewSnapshot!)
-		targetView.bringSubview(toFront: previousStyleTargetViewSnapshot!)
+		targetView.bringSubviewToFront(previousStyleTargetViewSnapshot!)
 		
 		// When we have the snapshot we create a new mask layer that's used to
 		// control how much of the previous view we display as the transition
