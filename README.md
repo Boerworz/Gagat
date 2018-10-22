@@ -2,7 +2,7 @@
 
 # What is Gagat?
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)]()
-[![Swift 3.2](https://img.shields.io/badge/Swift-3.2-orange.svg)](https://swift.org)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
 [![Objective-C compatible](https://img.shields.io/badge/Objective--C-compatible-48B3E9.svg)]()
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://raw.githubusercontent.com/Boerworz/Gagat/master/LICENSE)
@@ -15,7 +15,7 @@ Gagat is a small Swift library that makes it easy to add a delightful, interacti
 Gagat is **not** a library for styling your iOS applications. You must write all the styling logic yourself without any help from Gagat, and then call your styling code from your implementation of `GagatStyleable.toggleActiveStyle()`. If you are unsure of how to implement the styling, the Example app included with Gagat showcases one way to support different themes in an application by using [configuration models](http://www.jessesquires.com/enums-as-configs/).
 
 ## Requirements
-Gagat is written in Swift 3.2 and requires iOS 10.0. It can be used from both Swift and Objective-C clients.
+Gagat is written in Swift 4.2 and requires Xcode 10. It runs on iOS 10.0+ and can be used from both Swift and Objective-C clients.
 
 ## Installation
 
