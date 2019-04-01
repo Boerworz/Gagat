@@ -366,7 +366,7 @@
 			};
 			buildConfigurationList = 9386EDD51E577236009079B6 /* Build configuration list for PBXProject "Gagat" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
