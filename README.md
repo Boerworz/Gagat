@@ -9,7 +9,7 @@
 
 Gagat is a small Swift library that makes it easy to add a delightful, interactive way to switch between two different themes in your iOS application using a two-finger pan. The library was designed primarily for applications that support a "dark mode", and is heavily inspired by the Night Mode transition in [Castro 2](http://supertop.co/castro).
 
-![Gagat Example](gagat_example.gif)
+<img src="https://github.com/Boerworz/Gagat/blob/develop/gagat_example.gif" width="280"/>
 
 ### What Gagat is not
 Gagat is **not** a library for styling your iOS applications. You must write all the styling logic yourself without any help from Gagat, and then call your styling code from your implementation of `GagatStyleable.toggleActiveStyle()`. If you are unsure of how to implement the styling, the Example app included with Gagat showcases one way to support different themes in an application by using [configuration models](http://www.jessesquires.com/enums-as-configs/).
